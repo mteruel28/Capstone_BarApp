@@ -1,0 +1,26 @@
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* Cards */
+.card {
+  width: 280px;
+  height: 280px;
+  border-radius: 2rem;
+  margin: 15px;
+  background-color: white;
+
+  /* perfect center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+}
+
