@@ -1,9 +1,15 @@
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+}
+
 .container-2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+
 /* Cards */
 .card {
   width: 280px;
@@ -18,9 +24,3 @@
   align-items: center;
   flex-direction: column;
 }
-
-.search-bar-container {
-  display: flex;
-  justify-content: center;
-}
-
