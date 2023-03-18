@@ -1,46 +1,43 @@
-import'./App.css';
+//import logo from './logo.svg';
+import './App.css';
 
-function App () {
+function App() {
   return (
+    <div id="root">
     <div>
-      <div className="container">
-        <div className="item-1 header"> Miguel's Bar</div>
+      <div class="container">
+        <div class="item-1-header"> <h1>Miguel's Bar</h1></div>
       </div>
-
-      <div className="search-bar-container">
-        <input className="search-bar" placeholder="search..." type="text"></input>
+      <div class="search-bar-container">
+        <input class="search-bar" placeholder="search..." type="text"></input>
       </div>
-
-      <div className="container-2">
-          <div className="card">
+      <div class="container-2">
+          <div class="card">
               <h3>About</h3>
               <p>bonk...</p>
           </div>
-          
-          <div className="card"> 
+          <div class="card"> 
               <h3>Check-out</h3>
               <p>bonk...</p>
           </div>
-          <div className="card">
+          <div class="card">
               <h3>Wines</h3>
               <p>bonk...</p>
           </div>
-
-          <div className="card"> 
+          <div class="card"> 
               <h3>Spirits</h3>
               <p>bonk...</p>
           </div>
-
-          <div className="card"> 
+          <div class="card"> 
               <h3>Beers & Seltzers</h3>
               <p>bonk...</p>
           </div>
-
-          <div className="card"> 
+          <div class="card"> 
               <h3>Mixers & Misc</h3>
               <p>bonk...</p>
           </div>
       </div>
+    </div>
     </div>
   );
 }
