@@ -31,16 +31,22 @@
   flex-wrap: wrap;
 }
 
+.card:hover{
+  transform: scale(1.03);
+}
+
 .card__btn{
   padding: 1rem;
   font-family: inherit;
   font-weight:bold;
   font-size: 1rem;
   margin:1rem;
-  border:2px solid red;
+  border:2px solid black;
   background: transparent;
-  color: red;
+  color: black;
 }
 
-
-
+.card__btn:hover{
+  background: grey;
+  color:black;
+}
