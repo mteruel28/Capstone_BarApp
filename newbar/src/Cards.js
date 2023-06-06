@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import doge from './img/dogecrazy.jpg';
 import cart from './img/Shoppingcart.jpg';
 import wine from './img/Wines.jpg';
+import mixers from './img/Mixers.jpg';
+import beers from './img/Beers.jpg';
+import spirits from './img/Spirits.jpg';
 
 function Cards(){
 
@@ -33,19 +36,22 @@ function Cards(){
             title: "Spirits",
             sub_header: "This page contains all information about Spirits",
             link_text: "View Spirits",
-            path: "/Spirits"
+            path: "/Spirits", 
+            img_path: beers
         },
         {
             title: "Beers & Seltzers",
             sub_header: "This page contains all information about Beers & Seltzers",
             link_text: "View Beers & Seltzers",
-            path: "/BeersAndSeltzers"
+            path: "/BeersAndSeltzers" ,
+            img_path: beers
         },
         {
             title: "Mixers & Misc",
             sub_header: "This page contains information about Mixers & all other Misc products",
             link_text: "View Mixers & Misc",
-            path: "/MixersAndMisc"
+            path: "/MixersAndMisc" ,
+            img_path: mixers
         }
     ]
 
