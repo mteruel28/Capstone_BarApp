@@ -17,6 +17,7 @@
 .container{
   display: flex;
   justify-content: center;
+  
 }
 
 .search-bar-container {
