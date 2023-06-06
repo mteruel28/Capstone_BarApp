@@ -37,7 +37,7 @@ function Cards(){
             sub_header: "This page contains all information about Spirits",
             link_text: "View Spirits",
             path: "/Spirits", 
-            img_path: beers
+            img_path: spirits
         },
         {
             title: "Beers & Seltzers",
