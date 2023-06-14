@@ -7,7 +7,7 @@ import Kirin from './img/Kirin.jpg';
 import CoronaExtra from './img/CoronaExtra.jpg';
 
 function ItemCards(){
-    
+
     let Items = [
         {
             title: "Sapporo",
@@ -49,11 +49,11 @@ function ItemCards(){
 
 return(
     <div id="root">
-       <div className="ItemCards">
+       <div className="Container-3">
 
           {
               Items.map(Items => (
-                  <div className="Items">
+                  <div className="Items" key={Items.title} >
                       <h3 className= "Items__title">{Items.title}</h3>
                       <p className="Items_description">{Items.sub_header}</p>
                       <Link to={Items.path}>{Items.link_text}</Link> 
