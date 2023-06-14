@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Heineken from './img/Heineken.jpg';
-import Sapporo from './img/Sappor.jpg';
+import Sapporo from './img/Sapporo.jpg';
 import Asahi from './img/Asahi.jpg';
 import Kirin from './img/Kirin.jpg';
 import CoronaExtra from './img/CoronaExtra.jpg';
