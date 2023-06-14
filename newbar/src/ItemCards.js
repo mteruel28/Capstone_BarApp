@@ -40,7 +40,7 @@ function ItemCards(){
         {
             title: "Corona Extra ",
             sub_header: " This is Corona Extra Beer ",
-            link_text: "CoronaExtra Beer",
+            link_text: "Corona Extra Beer",
             path: "",
             img_path: CoronaExtra
         }
