@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Cards from './Cards';
+import ItemCards from './ItemCards';
 
 function Home() {
 
@@ -13,6 +14,7 @@ function Home() {
                 <input className="search-bar" placeholder="Search..." type="text"></input>
             </div>
             <Cards/>
+            <ItemCards/>
         </div>
     )
 }
