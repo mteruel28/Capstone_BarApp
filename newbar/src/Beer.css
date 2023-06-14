@@ -12,6 +12,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    padding: 1rem;
+    font-family: inherit;
+    font-weight:bold;
+    font-size: 1rem;
+    margin:1rem;
+    border:2px solid black;
+    background: transparent;
+    color: black;
   }
   
   .Container-3{
@@ -21,16 +30,8 @@
       flex-wrap: wrap;
   }
 
-  .Items{
-        transform: scale(1.03);
-        padding: 1rem;
-        font-family: inherit;
-        font-weight:bold;
-        font-size: 1rem;
-        margin:1rem;
-        border:2px solid black;
-        background: transparent;
-        color: black;
+  .Items:hover{
+    transform: scale(1.03);
   }
 
 
