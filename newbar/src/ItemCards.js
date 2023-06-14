@@ -11,7 +11,7 @@ function ItemCards(){
     let Items = [
         {
             title: "Sapporo",
-            sub_header: " This is Sapporo Beer ",
+            sub_header: " This is Sapporo Beer.",
             link_text: "Sapporo Beer",
             path: "",
             img_path: Sapporo 
