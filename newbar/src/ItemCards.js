@@ -7,46 +7,45 @@ import Kirin from './img/Kirin.jpg';
 import CoronaExtra from './img/CoronaExtra.jpg';
 
 function ItemCards(){
+    
     let Items = [
         {
             title: "Sapporo",
             sub_header: " This is Sapporo Beer ",
             link_text: "Sapporo Beer",
             path: "",
-            img_path: Sapporo ,
+            img_path: Sapporo 
         },
         {
             title: "Asahi",
             sub_header: " This is Asahi Beer ",
             link_text: "Asahi Beer",
             path: "",
-            img_path: Asahi,
+            img_path: Asahi
         },
         {
             title: "Kirin",
             sub_header: " This is Kirin Beer ",
             link_text: "Kirin Beer",
             path: "",
-            img_path: Kirin,
+            img_path: Kirin
         },
         {
             title: "Heineken",
             sub_header: " This is Heineken Beer ",
             link_text: "Heineken Beer",
             path: "",
-            img_path: Heineken,
+            img_path: Heineken
         },
         {
             title: "Corona Extra ",
             sub_header: " This is Corona Extra Beer ",
             link_text: "CoronaExtra Beer",
             path: "",
-            img_path: CoronaExtra,
-        },
+            img_path: CoronaExtra
+        }
    
    ] 
-
-
 
 return(
     <div id="root">

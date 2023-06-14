@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemCards from './ItemCards';
-import heineken from './img/Heineken.jpg';
+
 
 function BeersSelters(){
     return(
