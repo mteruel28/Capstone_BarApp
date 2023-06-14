@@ -14,7 +14,6 @@ function Home() {
                 <input className="search-bar" placeholder="Search..." type="text"></input>
             </div>
             <Cards/>
-            <ItemCards/>
         </div>
     )
 }
