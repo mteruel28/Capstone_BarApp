@@ -6,7 +6,7 @@ import Asahi from './img/Asahi.jpg';
 import Kirin from './img/Kirin.jpg';
 import CoronaExtra from './img/CoronaExtra.jpg';
 
-function ItemCards(){
+function BeerItemCards(){
 
     let Items = [
         {
@@ -65,4 +65,4 @@ return(
               </div>
 )
             }
-export default ItemCards;
+export default BeerItemCards;
