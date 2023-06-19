@@ -1,7 +1,6 @@
 import React from 'react';
-import ItemCards from './BeerItemCards';
-import './Beer.css';
 import BeerItemCards from './BeerItemCards';
+import './Beer.css';
 
 function BeersSelters(){
     return(

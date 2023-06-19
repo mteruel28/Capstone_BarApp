@@ -5,6 +5,7 @@ import Sapporo from './img/Sapporo.jpg';
 import Asahi from './img/Asahi.jpg';
 import Kirin from './img/Kirin.jpg';
 import CoronaExtra from './img/CoronaExtra.jpg';
+import TwistedTea from './img/TwistedTea.jpg';
 
 function BeerItemCards(){
 
@@ -43,6 +44,13 @@ function BeerItemCards(){
             link_text: "Corona Extra Beer",
             path: "",
             img_path: CoronaExtra
+        },
+        {
+            title: "Twisted Tea",
+            sub_header: " This is Twisted Tea Seltzer",
+            link_text: "Twisted Tea Seltzer",
+            path: "",
+            img_path: TwistedTea
         }
    
    ] 
