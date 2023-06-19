@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemCards from './ItemCards';
+import ItemCards from './BeerItemCards';
 import './Beer.css';
 
 function BeersSelters(){
@@ -9,7 +9,7 @@ function BeersSelters(){
        <div className="search-bar-container">
                 <input className="search-bar" placeholder="Search..." type="text"></input>
             </div>
-       <ItemCards/>
+       <BeerItemCards/>
        </div>
     )
 }
