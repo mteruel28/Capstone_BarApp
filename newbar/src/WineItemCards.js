@@ -5,6 +5,7 @@ import kendall from './img/kendalljackson.jpg';
 import josh from './img/josh.jpg';
 import ruffino from './img/Ruffino.jpg';
 import joshsb from './img/JoshSB.jpg';
+import chateau from './img/ChateauChardonnay.jpg'
 
 function WineItemCards(){
 
@@ -45,11 +46,11 @@ function WineItemCards(){
             img_path: joshsb
         },
         {
-            title: "Twisted Tea",
-            sub_header: " This is Twisted Tea Seltzer",
+            title: "Chateau Ste. Michelle Chardonnay", 
+            sub_header: "Chateau Ste. Michelle Chardonnay consists of combination of sweet apples and citrus with subtle aromas of spices and oak ",
            // link_text: "Twisted Tea Seltzer",
             path: "",
-            img_path: ""
+            img_path: chateau
         }
    
    ] 
