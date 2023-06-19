@@ -5,7 +5,8 @@ import kendall from './img/kendalljackson.jpg';
 import josh from './img/josh.jpg';
 import ruffino from './img/Ruffino.jpg';
 import joshsb from './img/JoshSB.jpg';
-import chateau from './img/ChateauChardonnay.jpg'
+import chateau from './img/ChateauChardonnay.jpg';
+import Bartenura from './img/Bartenura.jpg';
 
 function WineItemCards(){
 
@@ -51,6 +52,13 @@ function WineItemCards(){
            // link_text: "Twisted Tea Seltzer",
             path: "",
             img_path: chateau
+        },
+        {
+            title: "Bartenura Moscato", 
+            sub_header: "Bartenura Moscato consists of semi sweet with lingering pear tangerine nectar and melon.",
+           // link_text: "Twisted Tea Seltzer",
+            path: "",
+            img_path: Bartenura
         }
    
    ] 
