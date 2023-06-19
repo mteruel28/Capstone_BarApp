@@ -2,50 +2,52 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import mondavi from './img/mondavi.jpg';
 import kendall from './img/kendalljackson.jpg';
-
+import josh from './img/josh.jpg';
+import ruffino from './img/Ruffino.jpg';
+import joshsb from './img/JoshSB.jpg';
 
 function WineItemCards(){
 
     let Items = [
         {
             title: "Robert Mondavi Private Selection Cabernet Sauvignon",
-            sub_header: " This is the house red wine and contains aroma of black cherry blackberry vanilla toasty oak aged incombination of american and french oak",
-            link_text: "Mondavi",
+            sub_header: " This is the house red wine and contains aroma of black cherry blackberry vanilla toasty oak aged incombination of american and french oak.",
+            //link_text: "Mondavi",
             path: "",
             img_path: mondavi
         },
         {
             title: "Kendall Jackson Pinot Noir",
-            sub_header: " The Kendall Jackson pinot noir consists of cherry strawberry and raspberry with aromas of earthy tones of spiced oak",
-            link_text: "Kendall Jackson",
+            sub_header: " The Kendall Jackson pinot noir consists of cherry strawberry and raspberry with aromas of earthy tones of spiced oak.",
+            //link_text: "Kendall Jackson",
             path: "",
             img_path: kendall
         },
         {
-            title: "Kirin",
-            sub_header: " This is Kirin Beer ",
-            link_text: "Kirin Beer",
+            title: "Josh Cellars Merlot",
+            sub_header: "Josh Cellars Merlot merlot consists of balancing flavors of blueberry raspberry and milk chocolate with aromas of violets and vanilla.",
+           // link_text: "Kirin Beer",
             path: "",
-            img_path: ""
+            img_path: josh
         },
         {
-            title: "Heineken",
-            sub_header: " This is Heineken Beer ",
-            link_text: "Heineken Beer",
+            title: "Ruffino Lunima Venezia Giulia Pinot Grigio",
+            sub_header: "Ruffino Pinot Grigio consists of medium bodied aroma of mint and sage accompanied by lemon notes.",
+           // link_text: "Heineken Beer",
             path: "",
-            img_path: ""
+            img_path: ruffino
         },
         {
-            title: "Corona Extra ",
-            sub_header: " This is Corona Extra Beer ",
-            link_text: "Corona Extra Beer",
+            title: "Josh Cellars Sauvignon Blanc ",
+            sub_header: " Josh Cellars Sauvignon Blanc consists of combination of lemon and kiwi with aromas of green apple",
+            //link_text: "Corona Extra Beer",
             path: "",
-            img_path: ""
+            img_path: joshsb
         },
         {
             title: "Twisted Tea",
             sub_header: " This is Twisted Tea Seltzer",
-            link_text: "Twisted Tea Seltzer",
+           // link_text: "Twisted Tea Seltzer",
             path: "",
             img_path: ""
         }
