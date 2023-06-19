@@ -1,51 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import mondavi from './img/mondavi.jpg';
+import kendall from './img/kendalljackson.jpg';
 
 
 function WineItemCards(){
 
     let Items = [
         {
-            title: "Sapporo",
-            sub_header: " This is Sapporo Beer.",
-            link_text: "Sapporo Beer",
+            title: "Robert Mondavi Private Selection Cabernet Sauvignon",
+            sub_header: " This is the house red wine and contains aroma of black cherry blackberry vanilla toasty oak aged incombination of american and french oak",
+            link_text: "Mondavi",
             path: "",
-            img_path: 
+            img_path: mondavi
         },
         {
-            title: "Asahi",
-            sub_header: " This is Asahi Beer ",
-            link_text: "Asahi Beer",
+            title: "Kendall Jackson Pinot Noir",
+            sub_header: " The Kendall Jackson pinot noir consists of cherry strawberry and raspberry with aromas of earthy tones of spiced oak",
+            link_text: "Kendall Jackson",
             path: "",
-            img_path: 
+            img_path: kendall
         },
         {
             title: "Kirin",
             sub_header: " This is Kirin Beer ",
             link_text: "Kirin Beer",
             path: "",
-            img_path: 
+            img_path: ""
         },
         {
             title: "Heineken",
             sub_header: " This is Heineken Beer ",
             link_text: "Heineken Beer",
             path: "",
-            img_path: 
-        }, 
+            img_path: ""
+        },
         {
             title: "Corona Extra ",
             sub_header: " This is Corona Extra Beer ",
             link_text: "Corona Extra Beer",
             path: "",
-            img_path: 
+            img_path: ""
         },
         {
             title: "Twisted Tea",
             sub_header: " This is Twisted Tea Seltzer",
             link_text: "Twisted Tea Seltzer",
             path: "",
-            img_path:
+            img_path: ""
         }
    
    ] 
