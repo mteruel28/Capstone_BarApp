@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import jameson from './img/Jameson.jpg';
+import greygoose from './img/greygoose.jpg';
+import patron from './img/patron.jpg';
+import hendricks from './img/hendricks.jpg';
 
 function SpiritsItemCards(){
 
@@ -10,28 +13,28 @@ function SpiritsItemCards(){
             sub_header: "Shop our wide selection of Whiskey! ",
             //link_text: "Mondavi",
             path: "",
-            img_path: ""
+            img_path: jameson
         },
         {
             title: "Vodka",
             sub_header: "Shop our wide selection of Vodka! ",
             //link_text: "Kendall Jackson",
             path: "",
-            img_path: ""
+            img_path: greygoose
         },
         {
             title: "Tequila",
             sub_header: "Shop our wide selection of Tequila",
            // link_text: "Kirin Beer",
             path: "",
-            img_path: ""
+            img_path: patron
         },
         {
             title: "Gin",
             sub_header: "Shop our wide selection of Gin",
            // link_text: "Heineken Beer",
             path: "",
-            img_path: ""
+            img_path: hendricks
         }
    ] 
 
