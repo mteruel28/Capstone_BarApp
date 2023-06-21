@@ -1,6 +1,6 @@
 import React from 'react';
 import './Mixers.css';
-import MixersItemCards from './MixersItemCards';
+import MixersItemCards from './MixersItemCards.js';
 
 function Mixers(){
     return(

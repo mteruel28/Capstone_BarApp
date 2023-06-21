@@ -66,7 +66,7 @@ function Cards(){
                         <h3 className= "card__title">{card.title}</h3>
                         <p className="card_description">{card.sub_header}</p>
                         <Link to={card.path}>{card.link_text}</Link> 
-                        <img src={card.img_path} width='100' height='100' />
+                        <img src={card.img_path}  alt="" width='100' height='100' />
                     </div>
                 ))
             }

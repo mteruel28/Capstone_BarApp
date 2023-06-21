@@ -65,7 +65,7 @@ return(
                       <h3 className= "Items__title">{Items.title}</h3>
                       <p className="Items_description">{Items.sub_header}</p>
                       <Link to={Items.path}>{Items.link_text}</Link> 
-                      <img src={Items.img_path} width='100' height='100' />
+                      <img src={Items.img_path} alt="" width='100' height='100' />
                   </div>
               ))
               }
