@@ -17,3 +17,5 @@ function Wines(){
 </div>
     )
 }
+
+export default Wines;
