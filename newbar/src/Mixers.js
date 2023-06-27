@@ -1,6 +1,6 @@
 import React from 'react';
 import './Mixers.css';
-import MixersItemCards from './MixersItemCards.js';
+import MixerItemCards from './MixersItemCards.js';
 
 function Mixers(){
     return(
@@ -9,7 +9,7 @@ function Mixers(){
        <div className="search-bar-container">
        <input className="search-bar" placeholder="Search..." type="text"></input>
 </div>
-<MixersItemCards/>
+<MixerItemCards/>
 </div>
     )
 }
