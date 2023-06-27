@@ -5,7 +5,7 @@ import MixerItemCards from './MixersItemCards.js';
 function Mixers(){
     return(
         <div>
-       <p>Here is Mixers and Misc</p>
+       <p>Mixers and Misc</p>
        <div className="search-bar-container">
        <input className="search-bar" placeholder="Search..." type="text"></input>
 </div>
