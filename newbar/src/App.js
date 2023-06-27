@@ -14,6 +14,9 @@ import Mixers from './Mixers.js';
 import Spirits from './Spirits';
 import BeersandSeltzers from './BeersSeltzers';
 import Whiskey from './spiritsfolder/Whiskey';
+import Vodka from './spiritsfolder/Vodka';
+import Tequila from './spiritsfolder/Tequila';
+import Gin from './spiritsfolder/Gin';
 
 
 
@@ -31,6 +34,9 @@ function App() {
             <Route path='/beersandseltzers' exact element={<BeersandSeltzers/>} />
             <Route path='/mixersandmisc' exact element={<Mixers/>} />
             <Route path='/Whiskeys' exact element={<Whiskey/>} />
+            <Route path='/Vodkas' exact element={<Vodka/>} />
+            <Route path='/Tequilas' exact element={<Tequila/>} />
+            <Route path='/Gins' exact element={<Gin/>} />
 
           </Routes>
       </Router>
