@@ -1,37 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import greygoose from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/greygoose.jpg';
+import patron from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/patron.jpg';
+import reservasilver from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/reservasilver.jpg';
+import sauza from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/sauza.jpg';
+import painteddonkey from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/painteddonkey.jpg';
 
 function TequilaItemCards(){
 
     let Items = [
         {
-            title: "Tito's Handmade Vodka",
-            sub_header: " Titos",
+            title: "Patron Silver Tequila",
+            sub_header: "Patron Silver Tequila",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: patron
         },
         {
-            title: "Absolut Vodka",
-            sub_header: " Absolut Vodka ",
+            title: "1800 Reserva Silver Tequila",
+            sub_header: "1800 Silver Tequila",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: reservasilver
         },
         {
-            title: "Grey Goose ",
-            sub_header: " Grey Goose",
+            title: "Sauza Hacienda Gold Tequila",
+            sub_header: "Sauza Hacienda Gold Tequila",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: sauza
         },
         {
-            title: "Svedka Vodka",
-            sub_header: " Svedka Vodka",
+            title: "Painted Donkey Reposado Tequila",
+            sub_header: "Painted Donkey Reposado Tequila",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: painteddonkey
         }
    ] 
 

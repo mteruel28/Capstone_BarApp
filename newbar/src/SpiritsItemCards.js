@@ -26,7 +26,7 @@ function SpiritsItemCards(){
             title: "Tequila",
             sub_header: "Shop our wide selection of Tequila!",
             link_text: "View Tequilas",
-            path: "Tequilas",
+            path: "/Tequilas",
             img_path: patron
         },
         {
