@@ -1,0 +1,35 @@
+.Items{
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px gray;
+    border-radius: 2rem;
+    margin: 15px;
+    background-color: white;
+  
+    /* perfect center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 1rem;
+    font-family: inherit;
+    font-weight:bold;
+    font-size: 1rem;
+    margin:1rem;
+    border:2px solid black;
+    background: transparent;
+    color: black;
+  }
+  
+  .Container-11{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  .Items:hover{
+    transform: scale(1.03);
+  }
