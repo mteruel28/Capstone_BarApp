@@ -4,6 +4,7 @@ import jameson from './img/Jameson.jpg';
 import greygoose from './img/greygoose.jpg';
 import patron from './img/patron.jpg';
 import hendricks from './img/hendricks.jpg';
+import malibu from './img/malibu.jpg';
 
 function SpiritsItemCards(){
 
@@ -35,6 +36,13 @@ function SpiritsItemCards(){
             link_text: "View Gins",
             path: "/Gins",
             img_path: hendricks
+        },
+        {
+            title: "Rum",
+            sub_header: "Shop our wide selection of Rum!",
+            link_text: "View Rums",
+            path: "/Rums",
+            img_path: malibu
         }
    ] 
 

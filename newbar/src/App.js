@@ -37,6 +37,7 @@ function App() {
             <Route path='/Vodkas' exact element={<Vodka/>} />
             <Route path='/Tequilas' exact element={<Tequila/>} />
             <Route path='/Gins' exact element={<Gin/>} />
+            <Route path='/Rums' exact element={<Rum/>} />
 
           </Routes>
       </Router>
