@@ -5,7 +5,7 @@ import './Gin.css';
 function Gin(){
     return(
         <div>
-       <p>Tequila</p>
+       <p>Gins</p>
        <div className="search-bar-container">
                 <input className="search-bar" placeholder="Search..." type="text"></input>
             </div>

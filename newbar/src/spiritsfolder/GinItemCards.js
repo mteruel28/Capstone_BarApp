@@ -1,36 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bombay from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/bombay.jpg';
+import tanqueray from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/tanqueray.jpg';
+import hendricks from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/hendricks.jpg';
+import beefeater from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/beefeater.jpg';
 
 function GinItemCards(){
 
     let Items = [
         {
-            title: "Patron Silver Tequila",
-            sub_header: "Patron Silver Tequila",
+            title: "Bombay Sapphire Gin",
+            sub_header: "Bombay Sapphire Gin",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: bombay
         },
         {
-            title: "1800 Reserva Silver Tequila",
+            title: "Tanqueray London Dry Gin",
             sub_header: "1800 Silver Tequila",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: tanqueray
         },
         {
-            title: "Sauza Hacienda Gold Tequila",
-            sub_header: "Sauza Hacienda Gold Tequila",
+            title: "Hendricks Scottish Gin",
+            sub_header: "Hendricks Scottish Gin",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: hendricks
         },
         {
-            title: "Painted Donkey Reposado Tequila",
-            sub_header: "Painted Donkey Reposado Tequila",
+            title: "Beefeater London Dry Gin",
+            sub_header: "Beefeater London Dry Gin",
             link_text: "",
             path: "",
-            img_path: ""
+            img_path: beefeater
         }
    ] 
 
