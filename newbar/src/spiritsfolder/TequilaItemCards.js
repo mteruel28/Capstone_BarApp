@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //import greygoose from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/greygoose.jpg';
 
-
-
-
 function TequilaItemCards(){
 
     let Items = [
