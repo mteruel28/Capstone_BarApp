@@ -1,37 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import garnish from './img/garnish.jpg';
+import soda from './img/soda.jpg';
+import clubsoda from './img/clubsoda.jpg';
+import mixers2 from './img/mixers2.jpg';
+
 
 
 function MixerItemCards(){
 
     let Items = [
         {
-            title: "Whiskey",
-            sub_header: "Shop our wide selection of Whiskey!",
+            title: "Specialty Ingredients & Mixers",
+            sub_header: "Shop our wide selection of Specialty Ingredients & Mixers!",
             //link_text: "Mondavi",
             path: "",
-            img_path: ""
+            img_path: mixers2
         },
         {
-            title: "Vodka",
-            sub_header: "Shop our wide selection of Vodka! ",
+            title: "Tonic Water & Club Soda",
+            sub_header: "Shop our wide selection of Tonic Water & Club Soda! ",
             //link_text: "Kendall Jackson",
             path: "",
-            img_path: ""
+            img_path: clubsoda
         },
         {
-            title: "Tequila",
-            sub_header: "Shop our wide selection of Tequila!",
+            title: "Juices & Sodas",
+            sub_header: "Shop our wide selection of Syrups!",
            // link_text: "Kirin Beer",
             path: "",
-            img_path: ""
+            img_path: soda
         },
         {
-            title: "Gin",
-            sub_header: "Shop our wide selection of Gin!",
+            title: "Garnishes",
+            sub_header: "Shop our wide selection of Garnishes!",
            // link_text: "Heineken Beer",
             path: "",
-            img_path: ""
+            img_path: garnish
         }
    ] 
 
