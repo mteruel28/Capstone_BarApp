@@ -17,6 +17,7 @@ import Whiskey from './spiritsfolder/Whiskey';
 import Vodka from './spiritsfolder/Vodka';
 import Tequila from './spiritsfolder/Tequila';
 import Gin from './spiritsfolder/Gin';
+import Rum from './spiritsfolder/Rum';
 
 
 
