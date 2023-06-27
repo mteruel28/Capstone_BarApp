@@ -9,31 +9,31 @@ function SpiritsItemCards(){
 
     let Items = [
         {
-            title: "Whiskey",
+            title: "Whiskeys",
             sub_header: "Shop our wide selection of Whiskey!",
-            //link_text: "Mondavi",
-            path: "",
+            link_text: "View Whiskeys",
+            path: "/Whiskeys",
             img_path: jameson
         },
         {
             title: "Vodka",
             sub_header: "Shop our wide selection of Vodka! ",
-            //link_text: "Kendall Jackson",
-            path: "",
+            link_text: "View Vodkas",
+            path: "/Vodkas",
             img_path: greygoose
         },
         {
             title: "Tequila",
             sub_header: "Shop our wide selection of Tequila!",
-           // link_text: "Kirin Beer",
-            path: "",
+            link_text: "View Tequilas",
+            path: "Tequilas",
             img_path: patron
         },
         {
             title: "Gin",
             sub_header: "Shop our wide selection of Gin!",
-           // link_text: "Heineken Beer",
-            path: "",
+            link_text: "View Gins",
+            path: "/Gins",
             img_path: hendricks
         }
    ] 

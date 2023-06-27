@@ -13,6 +13,7 @@ import Wines from './Wines';
 import Mixers from './Mixers.js';
 import Spirits from './Spirits';
 import BeersandSeltzers from './BeersSeltzers';
+import Whiskey from './spiritsfolder/Whiskey';
 
 
 
@@ -29,7 +30,7 @@ function App() {
             <Route path='/spirits' exact element={<Spirits/>} />
             <Route path='/beersandseltzers' exact element={<BeersandSeltzers/>} />
             <Route path='/mixersandmisc' exact element={<Mixers/>} />
-
+            <Route path='/Whiskeys' exact element={<Whiskey/>} />
 
           </Routes>
       </Router>
