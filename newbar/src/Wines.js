@@ -1,16 +1,19 @@
 import React from 'react';
 import './Wine.css';
 import WineItemCards from './WineItemCards';
+import { useNavigate } from 'react-router-dom';
 
 function Wines(){
     return(
         <div>
-       <p>Wines</p>
+       <center><p>Wines</p></center>
+      
        <div className="search-bar-container">
             <input className="search-bar" placeholder="Search..." type="text"></input>
    </div>
+
+   <center><button> Return to Home </button> </center>
 <WineItemCards/>
 </div>
     )
 }
-export default Wines;
