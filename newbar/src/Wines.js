@@ -1,7 +1,7 @@
 import React from 'react';
 import './Wine.css';
 import WineItemCards from './WineItemCards';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Wines(){
     return(
@@ -12,7 +12,9 @@ function Wines(){
             <input className="search-bar" placeholder="Search..." type="text"></input>
    </div>
 
-   <center><button> Return to Home </button> </center>
+   <center> <Link to = '/'>
+    <button> Return to Home 
+        </button> </Link></center>
 <WineItemCards/>
 </div>
     )

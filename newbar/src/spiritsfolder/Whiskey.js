@@ -1,14 +1,20 @@
 import React from 'react';
 import WhiskeyItemCards from './WhiskeyItemCards';
 import './Whiskey.css';
+import { Link } from 'react-router-dom';
 
 function Whiskey(){
     return(
         <div>
-       <p>Whiskeys</p>
+       <center><p>Whiskeys</p></center>
        <div className="search-bar-container">
                 <input className="search-bar" placeholder="Search..." type="text"></input>
             </div>
+
+            <center> <Link to = '/Spirits'>
+<button> Return to Previous Page
+    </button> </Link></center>
+
        <WhiskeyItemCards/>
        </div>
     )
