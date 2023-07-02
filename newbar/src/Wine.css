@@ -18,7 +18,7 @@
     font-weight:bold;
     font-size: 1rem;
     margin:1rem;
-    border:2px solid black;
+    border: 5px solid black;
     background: transparent;
     color: black;
   }
@@ -28,6 +28,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+     
   }
 
   .Items:hover{

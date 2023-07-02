@@ -8,7 +8,7 @@ import {
   Route,
   Routes
 } from 'react-router-dom';
-import Shoppingcart from './Shoppingcart';
+
 import Wines from './Wines';
 import Mixers from './Mixers.js';
 import Spirits from './Spirits';
@@ -18,7 +18,7 @@ import Vodka from './spiritsfolder/Vodka';
 import Tequila from './spiritsfolder/Tequila';
 import Gin from './spiritsfolder/Gin';
 import Rum from './spiritsfolder/Rum';
-
+import Shoppingcart from './shoppingcart/shoppingcart';
 
 
 

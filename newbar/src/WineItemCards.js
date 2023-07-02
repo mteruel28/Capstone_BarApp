@@ -13,7 +13,7 @@ function WineItemCards(){
     let Items = [
         {
             title: "Robert Mondavi Private Selection Cabernet Sauvignon",
-            sub_header: " This is the house red wine and contains aroma of black cherry blackberry vanilla toasty oak aged incombination of american and french oak.",
+            sub_header:  " This is the house red wine and contains aroma of black cherry blackberry vanilla toasty oak aged incombination of american and french oak.",
             //link_text: "Mondavi",
             path: "",
             img_path: mondavi
@@ -74,6 +74,7 @@ return(
                       <p className="Items_description">{Items.sub_header}</p>
                       <Link to={Items.path}>{Items.link_text}</Link> 
                       <img src={Items.img_path} alt="" width='100' height='100' />
+                      <button><h4>Add to Cart</h4></button>
                   </div>
               ))
               }

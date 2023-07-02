@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212529;
+    color: white;
+    padding: auto;
+}
+
+.cart{
+    margin:auto;
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+    border: solid red;
+    padding: 15px;
+}
