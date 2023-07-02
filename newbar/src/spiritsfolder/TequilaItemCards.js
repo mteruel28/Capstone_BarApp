@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import patron from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/patron.jpg';
-import reservasilver from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/reservasilver.jpg';
-import sauza from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/sauza.jpg';
-import painteddonkey from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/painteddonkey.jpg';
+import patron from '../img/patron.jpg';
+import reservasilver from '../img/reservasilver.jpg';
+import sauza from '../img/sauza.jpg';
+import painteddonkey from '../img/painteddonkey.jpg';
 
 function TequilaItemCards(){
 

@@ -1,19 +1,20 @@
-import React from 'react';
-import './shoppingcart.css';
+import React from "react";
+import "./shoppingcart.css";
 
-
-function Shoppingcart(){
-    return (
-        <div className="navbar">
-          <div>
-            <h1>Shopping Cart</h1>
-             <div className="cart"><h3>Cart Items</h3></div>               
-            <div className='row'>
-                <div className ="column"> Example</div>
-                <div className ="column">  Another Example</div>
-                </div>
+function Shoppingcart() {
+  return (
+    <div className="navbar">
+      <div>
+        <h1>ShoppingCart</h1>
+        <div className="cart">Cart Items</div>
+        <div>
+          <button>Clear the Cart</button>
         </div>
+        <div>
+          <button>Checkout</button>
         </div>
-      );
-    }
-    export default Shoppingcart;
+      </div>
+    </div>
+  );
+}
+export default Shoppingcart;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import greygoose from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/greygoose.jpg';
-import titos from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/titos.jpg';
-import absolut from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/absolut.jpg';
-import svedka from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/svedka.jpg';
+import greygoose from '../img/greygoose.jpg';
+import titos from '../img/titos.jpg';
+import absolut from '../img/absolut.jpg';
+import svedka from '../img/svedka.jpg';
 
 
 

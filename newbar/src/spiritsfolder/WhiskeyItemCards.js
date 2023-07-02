@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import suntory from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/suntory.jpg';
-import jameson from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/Jameson.jpg';
-import crownroyal from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/CrownRoyal.jpg';
-import johnniewalker from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/johnniewalker.jpg';
-import makers from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/makers.jpg';
-import macallan from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/macallan.jpg';
+import suntory from '../img/suntory.jpg';
+import jameson from '../img/Jameson.jpg';
+import crownroyal from '../img/CrownRoyal.jpg';
+import johnniewalker from '../img/johnniewalker.jpg';
+import makers from '../img/makers.jpg';
+import macallan from '../img/macallan.jpg';
 
 function WhiskeyItemCards(){
 

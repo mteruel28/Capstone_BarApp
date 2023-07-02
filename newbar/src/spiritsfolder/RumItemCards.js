@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import malibu from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/malibu.jpg';
-import bacardi from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/bacardi.jpg';
-import bacardigold from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/bacardigold.jpg';
-import captainmorgan from '/Users/Miguel/Capstone_BarApp/Capstone_BarApp/newbar/src/img/captainmorgan.jpg';
+import malibu from '../img/malibu.jpg';
+import bacardi from '../img/bacardi.jpg';
+import bacardigold from '../img/bacardigold.jpg';
+import captainmorgan from '../img/captainmorgan.jpg';
 
 function RumItemCards(){
 
