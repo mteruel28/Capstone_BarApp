@@ -15,8 +15,7 @@ function WineItemCards() {
     {
       id: 1,
       title: "Robert Mondavi Private Selection Cabernet Sauvignon",
-      sub_header:
-        " This is the house red wine and contains aroma of black cherry blackberry vanilla toasty oak aged incombination of american and french oak.",
+      sub_header: " Mondavi Private contains aroma of black cherry blackberry vanilla toasty oak aged incombination of american and french oak.",
       //link_text: "Mondavi",
       path: "",
       img_path: mondavi,

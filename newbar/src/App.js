@@ -18,9 +18,7 @@ import Vodka from './spiritsfolder/Vodka';
 import Tequila from './spiritsfolder/Tequila';
 import Gin from './spiritsfolder/Gin';
 import Rum from './spiritsfolder/Rum';
-import Shoppingcart from './shoppingcart/shoppingcart';
-
-
+import Shoppingcart from './Cart/shoppingcart.js';
 
 function App() {
   return (
