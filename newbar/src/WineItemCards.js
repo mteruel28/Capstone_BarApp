@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import Counter from "./components/counter";
-
 import mondavi from "./img/mondavi.jpg";
 import kendall from "./img/kendalljackson.jpg";
 import josh from "./img/josh.jpg";

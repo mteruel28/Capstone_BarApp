@@ -14,7 +14,7 @@ import Vodka from "./spiritsfolder/Vodka";
 import Tequila from "./spiritsfolder/Tequila";
 import Gin from "./spiritsfolder/Gin";
 import Rum from "./spiritsfolder/Rum";
-import shoppingcart from "./Cart/shoppingcart";
+import Shoppingcart from "./Cart/shoppingcart";
 
 function App() {
   return (
@@ -23,14 +23,10 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/rewards" exact element={<Rewards />} />
-          <Route path="/shoppingcart" exact element={<Shoppingcart />} />
+          <Route path="/shoppingcart" exact element={<Shoppingcart/>} />
           <Route path="/wines" exact element={<Wines />} />
           <Route path="/spirits" exact element={<Spirits />} />
-          <Route
-            path="/beersandseltzers"
-            exact
-            element={<BeersandSeltzers />}
-          />
+          <Route path="/beersandseltzers"exact element={<BeersandSeltzers />}/>
           <Route path="/mixersandmisc" exact element={<Mixers />} />
           <Route path="/Whiskeys" exact element={<Whiskey />} />
           <Route path="/Vodkas" exact element={<Vodka />} />
