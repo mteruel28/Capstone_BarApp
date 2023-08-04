@@ -11,9 +11,7 @@ function BeersSelters(){
                 <input className="search-bar" placeholder="Search..." type="text"></input>
             </div>
        
- <center> <Link to = '/'>
-<button> Return to Home 
-    </button> </Link></center>
+ <center> <Link to = '/'><button> Return to Home  </button> </Link></center>
 
     <BeerItemCards/>
        </div>

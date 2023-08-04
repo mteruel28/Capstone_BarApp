@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Counter from "../components/counter";
 import greygoose from '../img/greygoose.jpg';
 import titos from '../img/titos.jpg';
 import absolut from '../img/absolut.jpg';
@@ -51,6 +52,7 @@ return(
                       <p className="Items_description">{Items.sub_header}</p>
                       <Link to={Items.path}>{Items.link_text}</Link> 
                       <img src={Items.img_path} alt="" width='100' height='100' />
+                      <Counter></Counter>
                   </div>
               ))
               }

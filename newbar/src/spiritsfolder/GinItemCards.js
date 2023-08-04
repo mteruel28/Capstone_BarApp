@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Counter from "../components/counter";
 import bombay from "../img/bombay.jpg";
 import tanqueray from "../img/tanqueray.jpg";
 import hendricks from "../img//hendricks.jpg";
@@ -46,6 +47,7 @@ function GinItemCards() {
             <p className="Items_description">{Items.sub_header}</p>
             <Link to={Items.path}>{Items.link_text}</Link>
             <img src={Items.img_path} alt="" width="100" height="100" />
+            <Counter></Counter>
           </div>
         ))}
       </div>
