@@ -24,12 +24,16 @@ class Counter extends Component {
     }
   }
 
+  addtocart(){
+    console.log("Item added to cart!");
+  }
+
   render() {
     return (
       <div>
        
         <button onClick={this.countIncrement}>+</button>
-        <button>Add to Cart</button>
+        <button onClick={this.addToCart}>Add to Cart</button>
         <button onClick={this.countDecrement}>-</button>
         <center>
             <span>{this.state.count}</span>

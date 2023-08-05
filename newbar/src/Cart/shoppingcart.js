@@ -9,7 +9,7 @@ function Shoppingcart() {
         <div className="logo">Shopping Cart</div>
 
         <div className="cart">
-          {" "}
+        <i class="fa-solid fa-cart-shopping"></i>
           Cart Items <p id="count"> " 4 " </p>
         </div>
 

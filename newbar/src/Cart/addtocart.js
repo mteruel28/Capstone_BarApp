@@ -1,3 +1,13 @@
+import React from "react";
+import Counter from "./components/counter";
+import mondavi from "./img/mondavi.jpg";
+import kendall from "./img/kendalljackson.jpg";
+import josh from "./img/josh.jpg";
+import ruffino from "./img/Ruffino.jpg";
+import joshsb from "./img/JoshSB.jpg";
+import chateau from "./img/ChateauChardonnay.jpg";
+import Bartenura from "./img/Bartenura.jpg";
+
 const products = [
     {
         id: 0,
@@ -56,11 +66,11 @@ const products = [
       },
 ]
 
-const categories = [...new Set(product.map((item)=>{return item}))]
+const categories = [...new Set(product.map((items)=>{return items}))]
 let i=0;
-document.getElementById('root').innerHTML = categories.map((item)=>
+document.getElementById('root').innerHTML = categories.map((items)=>
 {
-    var{title,sub_header,img_path,price} = item;
+    var{title,sub_header,img_path,price} = items;
     return(
         `<div class='box'>
             <div class='img-box'>
@@ -68,11 +78,41 @@ document.getElementById('root').innerHTML = categories.map((item)=>
                 </div>
                 <div class='bottom'>
                 <p>${title}</p>
+                <p>${sub_header}</p>
                 <h2>$ ${price}.00</h2>`+
                 "<button onclick ='addtocart("+(i++)+")'>Add to cart</button>"+
                 `</div>
                 </div>`
 
         )
+}).join('')
 
-})
+var cart=[];
+
+function addtocart(a){
+    cart.push({...categories[a]});
+    displaycart();
+}
+
+function displaycart(a){
+    let j=0;
+    if(cart.length==0){
+        document.getElementById('cartItem').innerHTML = "Your Cart is empty";   
+    }
+    else{
+        document.getElementById('cartItem').innerHTML = cart.map((items)=> 
+        {
+            var{title,sub_header,img_path,price} = items;
+            return(
+                `<div class= 'cart-item'>
+                <div class='row-img'>
+                    <img class='rowing' src=${img_path}>
+                    </div>
+                    <p style='font-size:12px;'>${title}</p>
+                    <p style='font-size:12px;'>${sub_header}</p>
+                    <h2 style='font-size:15px;'>$ ${price}.00 </h2>`+
+                    "<i class='fa-solid fa-trash' onclinc='delElement("+(j++)+")'></i></div>"
+            );
+        }).join('')
+    }
+}
