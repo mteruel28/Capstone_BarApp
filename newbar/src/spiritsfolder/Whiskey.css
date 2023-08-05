@@ -2,6 +2,7 @@
     width: 280px;
     height: 280px;
     overflow: hidden;
+    text-overflow: ellipsis;
     box-shadow: 0 2px 20px gray;
     border-radius: 2rem;
     margin: 15px;

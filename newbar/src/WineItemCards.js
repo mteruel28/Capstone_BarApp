@@ -73,7 +73,7 @@ function WineItemCards() {
         {Items.map((Items) => (
           <div className="Items" key={Items.title}>
             <div className="Items__title">{Items.title}</div>
-            <div className="Items_description">{Items.sub_header}</div>
+            <p className="Items_description">{Items.sub_header}</p>
             <img src={Items.img_path} alt="" width="100" height="100" />
             <div className="Items_price">{Items.price}</div>
             <Counter></Counter>

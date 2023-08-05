@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Counter from "../src/components/counter";
 import Heineken from "./img/Heineken.jpg";
 import Sapporo from "./img/Sapporo.jpg";
@@ -11,46 +10,40 @@ import TwistedTea from "./img/TwistedTea.jpg";
 function BeerItemCards() {
   let Items = [
     {
-      title: "Sapporo",
-      sub_header: " This is Sapporo Beer.",
-      link_text: "Sapporo Beer",
-      path: "",
+      title: "Sapporo Premium",
+      sub_header: " Sapporo Premium Beer is a refreshing lager with a crisp, refined flavor and a clean finish",
       img_path: Sapporo,
+      price:2.99,
     },
     {
-      title: "Asahi",
-      sub_header: " This is Asahi Beer ",
-      link_text: "Asahi Beer",
-      path: "",
+      title: "Asahi Super Dry",
+      sub_header: " Asahi Super Dry Beer is a rice lager from Japan. These beers are prepared with rice and malted barley ",
       img_path: Asahi,
+      price:2.99,
     },
     {
-      title: "Kirin",
-      sub_header: " This is Kirin Beer ",
-      link_text: "Kirin Beer",
-      path: "",
+      title: "Kirin Ichiban",
+      sub_header: " Kirin Ichiban is a Lager-type beer, which means it is fermented at low temperatures and offers a light and refreshing texture with a smooth and balanced flavor.",
       img_path: Kirin,
+      price:2.99,
     },
     {
       title: "Heineken",
-      sub_header: " This is Heineken Beer ",
-      link_text: "Heineken Beer",
-      path: "",
+      sub_header: " Heineken is a lager style of beer so it is heavier than other types. It has more of a stronger taste to it.",
       img_path: Heineken,
+      price:2.99,
     },
     {
       title: "Corona Extra ",
-      sub_header: " This is Corona Extra Beer ",
-      link_text: "Corona Extra Beer",
-      path: "",
+      sub_header: " Corona is a light and crisp pale Mexican lager that's wildly popular in the U.S.Its flavor profile is not overly complex, with sweet notes on the palate  ",
       img_path: CoronaExtra,
+      price:2.99,
     },
     {
-      title: "Twisted Tea",
-      sub_header: " This is Twisted Tea Seltzer",
-      link_text: "Twisted Tea Seltzer",
-      path: "",
+      title: "Twisted Tea Peach",
+      sub_header: " Twisted Tea Original is refreshingly smooth hard iced tea made with real brewed black tea and a twist of natural peach flavor.",
       img_path: TwistedTea,
+      price:2.99,
     },
   ];
 
@@ -59,10 +52,10 @@ function BeerItemCards() {
       <div className="Container-3">
         {Items.map((Items) => (
           <div className="Items" key={Items.title}>
-            <h3 className="Items__title">{Items.title}</h3>
+              <div className="Items__title">{Items.title}</div>
             <p className="Items_description">{Items.sub_header}</p>
-            <Link to={Items.path}>{Items.link_text}</Link>
             <img src={Items.img_path} alt="" width="100" height="100" />
+            <div className="Items_price">{Items.price}</div>
             <Counter></Counter>
           </div>
         ))}

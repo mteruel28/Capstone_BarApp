@@ -15,15 +15,7 @@
     align-items: center;
     flex-direction: column;
 
-    padding: 1rem;
-    font-family: inherit;
-    font-weight:bold;
-    font-size: 1rem;
-    margin:1rem;
-    border: 5px solid black;
-    background: transparent;
-    color: black;
-   
+  
   }
 
   .Container-4{
