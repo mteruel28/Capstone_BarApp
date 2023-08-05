@@ -24,18 +24,18 @@ class Counter extends Component {
     }
   }
 
-  handleAddToCart = () => {
-    const { count } = this.state;
-    this.props.addToCart(count, this.props.Wines);
+AddToCart = () => {
+    console.log("Item has been added to cart!");
   };
 
+
+}
   render() {
     return (
       <div>
-       
         <button onClick={this.countIncrement}>+</button>
-        <button onClick={this.handleAddToCart}>Add to Cart</button>
-        <button  onClick={this.countDecrement}>-</button>
+        <button id="addtocart" onClick={this.AddToCart}>Add to Cart</button>
+        <button onClick={this.countDecrement}>-</button>
         <center>
             <span>{this.state.count}</span>
         </center>
