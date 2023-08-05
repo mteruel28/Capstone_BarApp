@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Counter from "../components/counter";
 import suntory from "../img/suntory.jpg";
 import jameson from "../img/Jameson.jpg";

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import Counter from "./components/counter";
 import mondavi from "./img/mondavi.jpg";
 import kendall from "./img/kendalljackson.jpg";
@@ -8,8 +8,9 @@ import joshsb from "./img/JoshSB.jpg";
 import chateau from "./img/ChateauChardonnay.jpg";
 import Bartenura from "./img/Bartenura.jpg";
 
-function WineItemCards() {
-  let Items = [
+function WineItemCards(){
+
+let Wines = [
     {
       id: 0,
       title: "Robert Mondavi Private Selection Cabernet Sauvignon",
@@ -67,15 +68,16 @@ function WineItemCards() {
     },
   ];
 
+
   return (
     <div id="root">
       <div className="Container-4">
-        {Items.map((Items) => (
-          <div className="Items" key={Items.title}>
-            <div className="Items__title">{Items.title}</div>
-            <p className="Items_description">{Items.sub_header}</p>
-            <img src={Items.img_path} alt="" width="100" height="100" />
-            <div className="Items_price">{Items.price}</div>
+        {Wines.map((Wines) => (
+          <div className="Wines" key={Wines.id}>
+            <div className="Wines__title">{Wines.title}</div>
+            <p className="Wines_description">{Wines.sub_header}</p>
+            <img src={Wines.img_path} alt="" width="100" height="100" />
+            <div className="Wines_price">{Wines.price}</div>
             <Counter></Counter>
           </div>
         ))}
