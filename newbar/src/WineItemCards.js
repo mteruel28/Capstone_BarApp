@@ -68,6 +68,10 @@ let Wines = [
     },
   ];
 
+  const addToCart = (count, Wines) => {
+    // Replace this with your actual logic to add the selected wine to the cart
+    console.log("Added to cart:", Wines.title, "Quantity:", count);
+  };
 
   return (
     <div id="root">
@@ -78,7 +82,7 @@ let Wines = [
             <p className="Wines_description">{Wines.sub_header}</p>
             <img src={Wines.img_path} alt="" width="100" height="100" />
             <div className="Wines_price">{Wines.price}</div>
-            <Counter></Counter>
+            <Counter addToCart={addToCart} Wines={Wines} />
           </div>
         ))}
       </div>
