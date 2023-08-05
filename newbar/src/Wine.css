@@ -1,11 +1,13 @@
 .Items{
     width: 280px;
     height: 280px;
+    text-overflow: ellipsis;
     overflow: hidden;
     box-shadow: 0 2px 20px gray;
     border-radius: 2rem;
     margin: 15px;
     background-color: white;
+    
   
     /* perfect center */
     display: flex;
@@ -21,14 +23,15 @@
     border: 5px solid black;
     background: transparent;
     color: black;
+   
   }
-  
+
   .Container-4{
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-     
+    
   }
 
   .Items:hover{

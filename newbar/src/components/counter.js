@@ -24,17 +24,17 @@ class Counter extends Component {
     }
   }
 
-  render(){
-    return(
-    <div>
-        
-        <button>Add to Cart</button>
+  render() {
+    return (
+      <div>
+        <center>
+            <span>{this.state.count}</span>
+        </center>
         <button onClick={this.countIncrement}>+</button>
+        <button>Add to Cart</button>
         <button onClick={this.countDecrement}>-</button>
-        <span>{this.state.count}</span>
-        
-    </div>
-    )
+      </div>
+    );
   }
 }
 
