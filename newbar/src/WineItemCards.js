@@ -8,7 +8,7 @@ import joshsb from "./img/JoshSB.jpg";
 import chateau from "./img/ChateauChardonnay.jpg";
 import Bartenura from "./img/Bartenura.jpg";
 
-function WineItemCards(){
+const WineItemCards = () => {
 
 let Wines = [
     {
