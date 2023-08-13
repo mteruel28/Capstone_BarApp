@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./shoppingcart.css";
 import { Link } from "react-router-dom";
-import { product } from "./inventory";
-
 
 function Shoppingcart(){
 
