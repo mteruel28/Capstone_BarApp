@@ -8,7 +8,7 @@ import joshsb from "../img/JoshSB.jpg";
 import chateau from "../img/ChateauChardonnay.jpg";
 import Bartenura from "../img/Bartenura.jpg";
 
-const product = [
+export const products = [
     {
         id: 0,
         title: "Robert Mondavi Private Selection Cabernet Sauvignon",
@@ -93,9 +93,7 @@ function Inventory() {
 
   return (
     <div>
-      <Inventory newitem= {addToCart}/>
-
-      {product.map(product => (
+      {products.map(product => (
         <div key={product.id}>
           <img src={product.img_path} alt={product.title} />
           <h2>{product.title}</h2>

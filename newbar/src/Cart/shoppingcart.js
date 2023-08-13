@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./shoppingcart.css";
 import { Link } from "react-router-dom";
+import Inventory from "../Cart/inventory";
 
-function Shoppingcart(){
+function Shoppingcart({ products }){
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -55,6 +56,10 @@ function Shoppingcart(){
           <button> Return to Home </button>
         </Link>
       </center>
+
+      <Inventory />
+      {/* Passing product array as a prop */}
+      <Shoppingcart products={products} />
 
     </div>
   );
