@@ -99,7 +99,7 @@ function Inventory() {
           <h2>{product.title}</h2>
           <p>{product.sub_header}</p>
           <p>Price: ${product.price.toFixed(2)}</p>
-          <Counter product={product} onAddToCart={addToCart} />
+          <Counter products={product} onAddToCart={addToCart} />
         </div>
       ))}
     </div>
