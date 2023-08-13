@@ -1,14 +1,14 @@
 import React from "react";
-import Counter from "./components/counter";
-import mondavi from "./img/mondavi.jpg";
-import kendall from "./img/kendalljackson.jpg";
-import josh from "./img/josh.jpg";
-import ruffino from "./img/Ruffino.jpg";
-import joshsb from "./img/JoshSB.jpg";
-import chateau from "./img/ChateauChardonnay.jpg";
-import Bartenura from "./img/Bartenura.jpg";
+import Counter from '../components/counter';
+import mondavi from "../img/mondavi.jpg";
+import kendall from "../img/kendalljackson.jpg";
+import josh from "../img/josh.jpg";
+import ruffino from "../img/Ruffino.jpg";
+import joshsb from "../img/JoshSB.jpg";
+import chateau from "../img/ChateauChardonnay.jpg";
+import Bartenura from "../img/Bartenura.jpg";
 
-const products = [
+export const products = [
     {
         id: 0,
         title: "Robert Mondavi Private Selection Cabernet Sauvignon",
