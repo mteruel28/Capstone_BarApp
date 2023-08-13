@@ -1,7 +1,7 @@
  import React, { useState } from "react";
 
 //extending the parent class
-const Counter = ({ products}) => {
+const Counter = ({ product}) => {
   // react hooks for state management. State is just a variable that changes in a component.
   const [count, setCount] = useState(0);
   // state = {
@@ -29,26 +29,26 @@ const Counter = ({ products}) => {
 
   const addToCart = () => {
     if (count > 0) {
-      onAddToCart(products, count);
+      onAddToCart(product, count);
       setCount(0);
     }
   }
 
-  const onAddToCart = (products, quantity) => {
+  const onAddToCart = (product, quantity) => {
     // Check if product is already in the cart
-    const existingProduct = cart.find(item => item.id === products.id);
+    const existingProduct = cart.find(item => item.id === product.id);
 
     if (existingProduct) {
         // If the product is already in the cart, just update its quantity
         const updatedCart = cart.map(item =>
-            item.id === products.id
+            item.id === product.id
                 ? { ...item, quantity: item.quantity + quantity }
                 : item
         );
         setCart(updatedCart);
     } else {
         // If the product is not in the cart, add it with the specified quantity
-        setCart([...cart, { ...products, quantity }]);
+        setCart([...cart, { ...product, quantity }]);
     }
 };
 
@@ -57,7 +57,7 @@ const Counter = ({ products}) => {
       <button onClick={countIncrement}>+</button>
       <button id="addtocart" onClick={addToCart}>Add to Cart</button>
       <button onClick={countDecrement}>-</button>
-      <Counter product={products} onAddToCart={addToCart} />
+      <Counter product={product} onAddToCart={addToCart} />
       <center>
           <span>{count}</span>
       </center>

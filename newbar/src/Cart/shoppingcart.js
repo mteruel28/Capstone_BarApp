@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./shoppingcart.css";
 import { Link } from "react-router-dom";
+import { product } from "./inventory";
 
 
-function Shoppingcart() {
+function Shoppingcart(){
+
   const [cartItems, setCartItems] = useState([]);
 
   // Load cart items from localStorage when component mounts
@@ -16,6 +18,7 @@ function Shoppingcart() {
    const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
    return (
+
     <div className="header">
       <div>
         <div className="logo">Shopping Cart</div>
@@ -57,7 +60,7 @@ function Shoppingcart() {
 
     </div>
   );
-}
+              }
 
 export default Shoppingcart;
 

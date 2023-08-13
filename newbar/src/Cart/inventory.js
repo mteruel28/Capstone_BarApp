@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Counter from '../components/counter';
+import Counter ,{addToCart} from '../components/counter';
 import mondavi from "../img/mondavi.jpg";
 import kendall from "../img/kendalljackson.jpg";
 import josh from "../img/josh.jpg";
@@ -8,7 +8,7 @@ import joshsb from "../img/JoshSB.jpg";
 import chateau from "../img/ChateauChardonnay.jpg";
 import Bartenura from "../img/Bartenura.jpg";
 
-export const products = [
+export const product = [
     {
         id: 0,
         title: "Robert Mondavi Private Selection Cabernet Sauvignon",
@@ -68,6 +68,7 @@ export const products = [
 ]
 
 function Inventory() {
+
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product, quantity) => {
@@ -85,13 +86,15 @@ function Inventory() {
 
   return (
     <div>
-      {products.map(product => (
+      <Inventory newitem= {addToCart}/>
+
+      {product.map(product => (
         <div key={product.id}>
           <img src={product.img_path} alt={product.title} />
           <h2>{product.title}</h2>
           <p>{product.sub_header}</p>
           <p>Price: ${product.price.toFixed(2)}</p>
-          <Counter products={productItem} onAddToCart={addToCart} />
+          <Counter product={product} onAddToCart={addToCart} />
         </div>
       ))}
     </div>
