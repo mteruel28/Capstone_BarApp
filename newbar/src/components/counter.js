@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, {useState } from "react";
 
 
 //extending the parent class
@@ -17,27 +17,28 @@ const Counter = () => {
 
   const countIncrement = () => {
     // this.setState({ count: this.state.count + 1 });
-    setCount(count + 1)
+    setCount(prevCount => prevCount + 1);
   }
 
   const countDecrement = () => {
-    if (this.state.count === 0) {
+    if (count === 0) {
       // this.setState({ count: this.state.count });
-      setCount(count)
+      //setCount(count)
+      return;
     } else {
       // this.setState({ count: this.state.count - 1 });
-      setCount(count - 1)
+      setCount(prevCount => prevCount - 1)
     }
   }
 
-  const AddToCart = () => {
+  const addToCart = () => {
     console.log("Item has been added to cart!");
   }
 
   return (
     <div>
       <button onClick={countIncrement}>+</button>
-      <button id="addtocart" onClick={AddToCart}>Add to Cart</button>
+      <button id="addtocart" onClick={addToCart}>Add to Cart</button>
       <button onClick={countDecrement}>-</button>
       <center>
           <span>{count}</span>
