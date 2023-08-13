@@ -1,6 +1,7 @@
  import React, { useState } from "react";
+
 //extending the parent class
-const Counter = () => {
+const Counter = ({ products}) => {
   // react hooks for state management. State is just a variable that changes in a component.
   const [count, setCount] = useState(0);
   // state = {
@@ -13,30 +14,50 @@ const Counter = () => {
   //   this.countDecrement = this.countDecrement.bind(this);
   // }
 
+  const [cart, setCart] = useState([]);
+
   const countIncrement = () => {
     // this.setState({ count: this.state.count + 1 });
     setCount(count + 1)
   }
 
   const countDecrement = () => {
-    if (this.state.count === 0) {
-      // this.setState({ count: this.state.count });
-      setCount(count)
-    } else {
-      // this.setState({ count: this.state.count - 1 });
-      setCount(count - 1)
+    if (count > 0) {
+      setCount(count - 1);
     }
   }
 
-  const AddToCart = () => {
-    console.log("Item has been added to cart!");
+  const addToCart = () => {
+    if (count > 0) {
+      onAddToCart(products, count);
+      setCount(0);
+    }
   }
+
+  const onAddToCart = (products, quantity) => {
+    // Check if product is already in the cart
+    const existingProduct = cart.find(item => item.id === products.id);
+
+    if (existingProduct) {
+        // If the product is already in the cart, just update its quantity
+        const updatedCart = cart.map(item =>
+            item.id === products.id
+                ? { ...item, quantity: item.quantity + quantity }
+                : item
+        );
+        setCart(updatedCart);
+    } else {
+        // If the product is not in the cart, add it with the specified quantity
+        setCart([...cart, { ...products, quantity }]);
+    }
+};
 
   return (
     <div>
       <button onClick={countIncrement}>+</button>
-      <button id="addtocart" onClick={AddToCart}>Add to Cart</button>
+      <button id="addtocart" onClick={addToCart}>Add to Cart</button>
       <button onClick={countDecrement}>-</button>
+      <Counter product={products} onAddToCart={addToCart} />
       <center>
           <span>{count}</span>
       </center>
@@ -45,4 +66,4 @@ const Counter = () => {
 
 };
 
-export default Counter; 
+export default Counter;

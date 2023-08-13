@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Counter from '../components/counter';
 import mondavi from "../img/mondavi.jpg";
 import kendall from "../img/kendalljackson.jpg";
@@ -64,4 +64,40 @@ export const products = [
         img_path: Bartenura,
         price:12.99,
       },
+
 ]
+
+function Inventory() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product, quantity) => {
+    const updatedCart = [...cartItems];
+    const existingItem = updatedCart.find(item => item.id === product.id);
+
+    if (existingItem) {
+      existingItem.quantity += quantity;
+    } else {
+      updatedCart.push({ ...product, quantity });
+    }
+
+    setCartItems(updatedCart);
+  };
+
+  return (
+    <div>
+      {products.map(product => (
+        <div key={product.id}>
+          <img src={product.img_path} alt={product.title} />
+          <h2>{product.title}</h2>
+          <p>{product.sub_header}</p>
+          <p>Price: ${product.price.toFixed(2)}</p>
+          <Counter products={productItem} onAddToCart={addToCart} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Inventory;
+
+
