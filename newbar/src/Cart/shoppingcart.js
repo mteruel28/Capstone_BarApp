@@ -25,9 +25,9 @@ function Shoppingcart(){
     setProducts(items);
   }, []);
 
-  
-  
+  const total = products.reduce((acc, product) => acc + product.price * product.quantity, 0);
 
+  
    // Calculate the total based on the items in the cart
   //  const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
@@ -62,7 +62,7 @@ function Shoppingcart(){
             </div>
             <div className="foot">
               <h3>Total</h3>
-              <h2 id="total">$$$</h2>
+              <h2 id="total">${total}</h2>
             </div>
           </div>
         </div>

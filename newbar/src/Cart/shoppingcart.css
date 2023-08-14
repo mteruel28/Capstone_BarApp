@@ -28,11 +28,11 @@
 .sc-container{
     display: flex;
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: auto;
 }
 
 .sidebar{
-    height: 220px;
+    height: auto;
     width: 250px;
     border-radius: 5px;
     background-color: lightgray;
