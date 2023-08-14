@@ -32,7 +32,7 @@ function Shoppingcart(){
   //  const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
    return (
-
+    
 
     <div className="header">
       <div>
@@ -52,7 +52,7 @@ function Shoppingcart(){
                 products.map(product => (
                   <div>
                     <h4>{product.title}</h4>
-                    <p>Price: ${product.price * product.quantity}</p>
+                    <p>Price: ${product.price.toFixed(2) * product.quantity}</p>
                     <p>Quantity: {product.quantity}</p>
                   </div>
                 ))
@@ -62,7 +62,7 @@ function Shoppingcart(){
             </div>
             <div className="foot">
               <h3>Total</h3>
-              <h2 id="total">${total}</h2>
+              <h2 id="total">${total.toFixed(2)}</h2>
             </div>
           </div>
         </div>
