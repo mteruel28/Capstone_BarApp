@@ -1,4 +1,4 @@
-.Items{
+.Whiskeys{
     width: 280px;
     height: 280px;
     overflow: hidden;
@@ -31,7 +31,7 @@
       flex-wrap: wrap;
   }
 
-  .Items:hover{
+  .Whiskeys:hover{
     transform: scale(1.03);
   }
 

@@ -11,30 +11,26 @@ function GinItemCards() {
     {
       title: "Bombay Sapphire Gin",
       sub_header: "Bombay Sapphire Gin",
-      link_text: "",
-      path: "",
       img_path: bombay,
+      price:19.99,
     },
     {
       title: "Tanqueray London Dry Gin",
       sub_header: "1800 Silver Tequila",
-      link_text: "",
-      path: "",
       img_path: tanqueray,
+      price:22.99,
     },
     {
       title: "Hendricks Scottish Gin",
       sub_header: "Hendricks Scottish Gin",
-      link_text: "",
-      path: "",
       img_path: hendricks,
+      price:22.99,
     },
     {
       title: "Beefeater London Dry Gin",
       sub_header: "Beefeater London Dry Gin",
-      link_text: "",
-      path: "",
       img_path: beefeater,
+      price:20.99,
     },
   ];
 
@@ -45,9 +41,9 @@ function GinItemCards() {
           <div className="Items" key={Items.title}>
             <h3 className="Items__title">{Items.title}</h3>
             <p className="Items_description">{Items.sub_header}</p>
-            <Link to={Items.path}>{Items.link_text}</Link>
             <img src={Items.img_path} alt="" width="100" height="100" />
-            <Counter></Counter>
+            <div className="Items_price">{Items.price}</div>
+            <Counter product={Items}></Counter>
           </div>
         ))}
       </div>

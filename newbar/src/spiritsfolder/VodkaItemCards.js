@@ -14,30 +14,26 @@ function VodkaItemCards(){
         {
             title: "Tito's Handmade Vodka",
             sub_header: " Titos",
-            link_text: "",
-            path: "",
-            img_path: titos
+            img_path: titos, 
+            price:17.99,
         },
         {
             title: "Absolut Vodka",
             sub_header: " Absolut Vodka ",
-            link_text: "",
-            path: "",
-            img_path: absolut
+            img_path: absolut,
+            price:17.99,
         },
         {
             title: "Grey Goose ",
             sub_header: " Grey Goose",
-            link_text: "",
-            path: "",
-            img_path: greygoose
+            img_path: greygoose,
+            price:22.99,
         },
         {
             title: "Svedka Vodka",
             sub_header: " Svedka Vodka",
-            link_text: "",
-            path: "",
-            img_path: svedka
+            img_path: svedka,
+            price:10.99,
         }
    ] 
 
@@ -50,9 +46,9 @@ return(
                   <div className="Items" key={Items.title} >
                       <h3 className= "Items__title">{Items.title}</h3>
                       <p className="Items_description">{Items.sub_header}</p>
-                      <Link to={Items.path}>{Items.link_text}</Link> 
                       <img src={Items.img_path} alt="" width='100' height='100' />
-                      <Counter></Counter>
+                      <div className="Items_price">{Items.price}</div>
+                      <Counter product={Items}></Counter>
                   </div>
               ))
               }

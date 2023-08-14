@@ -8,7 +8,7 @@ import makers from "../img/makers.jpg";
 import macallan from "../img/macallan.jpg";
 
 function WhiskeyItemCards() {
-  let Items = [
+  let Whiskeys = [
     {
       title: "Jameson Irish Whiskey",
       sub_header: " Jameson Irish Whiskey is a blended Irish Whiskey. A light floral fragrance, peppered with spicy wood and sweet notes.",
@@ -51,13 +51,13 @@ function WhiskeyItemCards() {
   return (
     <div id="root">
       <div className="Container-7">
-        {Items.map((Items) => (
-          <div className="Items" key={Items.title}>
-           <div className="Items__title">{Items.title}</div>
-            <p className="Items_description">{Items.sub_header}</p>
-            <img src={Items.img_path} alt="" width="100" height="100" />
-            <div className="Items_price">{Items.price}</div>
-            <Counter></Counter>
+      {Whiskeys.map((Whiskeys) => (
+          <div className="Whiskeys" key={Whiskeys.id}>
+            <div className="Whiskeys__title">{Whiskeys.title}</div>
+            <p className="Whiskeys_description">{Whiskeys.sub_header}</p>
+            <img src={Whiskeys.img_path} alt="" width="100" height="100" />
+            <div className="Whiskeys_price">{Whiskeys.price}</div>
+            <Counter product={Whiskeys}></Counter>
           </div>
         ))}
       </div>

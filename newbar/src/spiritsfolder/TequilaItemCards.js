@@ -11,30 +11,26 @@ function TequilaItemCards() {
     {
       title: "Patron Silver Tequila",
       sub_header: "Patron Silver Tequila",
-      link_text: "",
-      path: "",
       img_path: patron,
+      price:40.99,
     },
     {
       title: "1800 Reserva Silver Tequila",
       sub_header: "1800 Silver Tequila",
-      link_text: "",
-      path: "",
       img_path: reservasilver,
+      price:24.99,
     },
     {
       title: "Sauza Hacienda Gold Tequila",
       sub_header: "Sauza Hacienda Gold Tequila",
-      link_text: "",
-      path: "",
       img_path: sauza,
+      price:13.99,
     },
     {
       title: "Painted Donkey Reposado Tequila",
       sub_header: "Painted Donkey Reposado Tequila",
-      link_text: "",
-      path: "",
       img_path: painteddonkey,
+      price:24.99,
     },
   ];
 
@@ -45,9 +41,9 @@ function TequilaItemCards() {
           <div className="Items" key={Items.title}>
             <h3 className="Items__title">{Items.title}</h3>
             <p className="Items_description">{Items.sub_header}</p>
-            <Link to={Items.path}>{Items.link_text}</Link>
             <img src={Items.img_path} alt="" width="100" height="100" />
-            <Counter></Counter>
+            <div className="Items_price">{Items.price}</div>
+            <Counter product={Items}></Counter>
           </div>
         ))}
       </div>

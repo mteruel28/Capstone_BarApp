@@ -8,7 +8,7 @@ import CoronaExtra from "./img/CoronaExtra.jpg";
 import TwistedTea from "./img/TwistedTea.jpg";
 
 function BeerItemCards() {
-  let Items = [
+  let Beers = [
     {
       title: "Sapporo Premium",
       sub_header: " Sapporo Premium Beer is a refreshing lager with a crisp, refined flavor and a clean finish",
@@ -50,13 +50,13 @@ function BeerItemCards() {
   return (
     <div id="root">
       <div className="Container-3">
-        {Items.map((Items) => (
-          <div className="Items" key={Items.title}>
-              <div className="Items__title">{Items.title}</div>
-            <p className="Items_description">{Items.sub_header}</p>
-            <img src={Items.img_path} alt="" width="100" height="100" />
-            <div className="Items_price">{Items.price}</div>
-            <Counter></Counter>
+      {Beers.map((Beers) => (
+          <div className="Beers" key={Beers.id}>
+            <div className="Beers__title">{Beers.title}</div>
+            <p className="Beers_description">{Beers.sub_header}</p>
+            <img src={Beers.img_path} alt="" width="100" height="100" />
+            <div className="Beers_price">{Beers.price}</div>
+            <Counter product={Beers}></Counter>
           </div>
         ))}
       </div>

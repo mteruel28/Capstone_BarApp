@@ -12,6 +12,7 @@ function BeersSelters(){
             </div>
        
  <center> <Link to = '/'><button> Return to Home  </button> </Link></center>
+ <center> <Link to = '/shoppingcart'><button> Return to Shopping Cart </button> </Link></center>
 
     <BeerItemCards/>
        </div>

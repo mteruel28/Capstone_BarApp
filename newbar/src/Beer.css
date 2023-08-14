@@ -1,4 +1,4 @@
-.Items{
+.Beers{
     width: 280px;
     height: 280px;
     overflow: hidden;
@@ -30,7 +30,7 @@
       flex-wrap: wrap;
   }
 
-  .Items:hover{
+  .Beers:hover{
     transform: scale(1.03);
   }
 

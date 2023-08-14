@@ -14,6 +14,7 @@ function Vodka(){
             <center> <Link to = '/Spirits'>
 <button> Return to Previous Page
     </button> </Link></center>
+    <center> <Link to = '/shoppingcart'><button> Return to Shopping Cart </button> </Link></center>
 
        <VodkaItemCards/>
        </div>

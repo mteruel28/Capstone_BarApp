@@ -58,13 +58,14 @@ const Counter = ({ product }) => {
     sessionStorage.setItem(product.title, JSON.stringify([count, product.price]));
     
     setCount(0);
+   
 };
 
 
   return (
     <div>
       <button onClick={countIncrement}>+</button>
-      <button id="addtocart" onClick={onAddToCart}>Add to Cart</button>
+      <button id="addtocart"onClick={onAddToCart} >Add to Cart</button> 
       {/* <Link to={`/shoppingcart/${product.id}/${count}`}>
         Add to Cart
       </Link> */}
