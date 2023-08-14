@@ -2,22 +2,31 @@ import React, { useState, useEffect } from "react";
 import "./shoppingcart.css";
 import { Link } from "react-router-dom";
 import Inventory from "./inventory";
+import Counter from "../components/counter";
 
-function Shoppingcart({ products }){
+function Shoppingcart(){
 
   const [cartItems, setCartItems] = useState([]);
-
+  const [products, setProducts] = useState([]);
+ 
   // Load cart items from localStorage when component mounts
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-    setCartItems(storedCart);
-  }, []);
+   
+     // retrieve all the objects as key and value objects in sessionStorage and store in an array
+     const items = Object.keys(sessionStorage).map(key => {
+      let value = JSON.parse(sessionStorage.getItem(key));
+      return {
+        title: key,
+        quantity: value[0],
+        price: value[1]
+      }
+    });
 
-   // Calculate the total based on the items in the cart
-   const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    setProducts(items);
+  }, []);
+  
 
    return (
-
     <div className="header">
       <div>
         <div className="logo">Shopping Cart</div>
@@ -32,12 +41,12 @@ function Shoppingcart({ products }){
           <div className="sidebar">
             <div className="head"><p>"My Cart"</p></div>
             <div id="cartItem">
-              {cartItems.length > 0 ? (
-                cartItems.map(item => (
-                  <div key={item.id}>
-                    <h4>{item.title}</h4>
-                    <p>Price: ${item.price.toFixed(2)}</p>
-                    <p>Quantity: {item.quantity}</p>
+              {products.length > 0 ? (
+                products.map(product => (
+                  <div>
+                    <h4>{product.title}</h4>
+                    <p>Price: ${product.price * product.quantity}</p>
+                    <p>Quantity: {product.quantity}</p>
                   </div>
                 ))
               ) : (
@@ -46,7 +55,7 @@ function Shoppingcart({ products }){
             </div>
             <div className="foot">
               <h3>Total</h3>
-              <h2 id="total">${total.toFixed(2)}</h2>
+              <h2 id="total">$$$</h2>
             </div>
           </div>
         </div>
@@ -56,12 +65,8 @@ function Shoppingcart({ products }){
           <button> Return to Home </button>
         </Link>
       </center>
-
-      <Inventory />
-      {/* Passing product array as a prop */}
-      <Shoppingcart products={products} />
-
-    </div>
+      </div>
+ 
   );
               }
 

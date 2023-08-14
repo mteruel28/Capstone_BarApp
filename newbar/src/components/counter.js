@@ -34,22 +34,15 @@ const Counter = ({ product}) => {
     }
   }
 
-  const onAddToCart = (product, quantity) => {
+  const onAddToCart = () => {
     // Check if product is already in the cart
-    const existingProduct = cart.find(item => item.id === product.id);
+    //const existingProduct = cart.find(item => item.id === product.id);
 
-    if (existingProduct) {
-        // If the product is already in the cart, just update its quantity
-        const updatedCart = cart.map(item =>
-            item.id === product.id
-                ? { ...item, quantity: item.quantity + quantity }
-                : item
-        );
-        setCart(updatedCart);
-    } else {
-        // If the product is not in the cart, add it with the specified quantity
-        setCart([...cart, { ...product, quantity }]);
-    }
+
+// Save cart to LocalStorage
+//sessionStorage.setItem(`${products.title}`,JSON.stringify(count));
+sessionStorage.setItem(product.title, JSON.stringify([count, product.price]));
+setCount(0);
 };
 
   return (
@@ -57,7 +50,7 @@ const Counter = ({ product}) => {
       <button onClick={countIncrement}>+</button>
       <button id="addtocart" onClick={addToCart}>Add to Cart</button>
       <button onClick={countDecrement}>-</button>
-      <Counter product={product} onAddToCart={addToCart} />
+   
       <center>
           <span>{count}</span>
       </center>
