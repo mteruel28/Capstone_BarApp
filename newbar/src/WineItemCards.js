@@ -82,7 +82,7 @@ let Wines = [
             <p className="Wines_description">{Wines.sub_header}</p>
             <img src={Wines.img_path} alt="" width="100" height="100" />
             <div className="Wines_price">{Wines.price}</div>
-            <Counter></Counter>
+            <Counter product={Wines}></Counter>
           </div>
         ))}
       </div>

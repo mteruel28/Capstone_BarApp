@@ -1,7 +1,8 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 //extending the parent class
-const Counter = ({ product}) => {
+const Counter = ({ product }) => {
   // react hooks for state management. State is just a variable that changes in a component.
   const [count, setCount] = useState(0);
   // state = {
@@ -35,22 +36,40 @@ const Counter = ({ product}) => {
   }
 
   const onAddToCart = () => {
-    // Check if product is already in the cart
-    //const existingProduct = cart.find(item => item.id === product.id);
+    // // Check if product is already in the cart
+    // const existingProduct = cart.find(item => item.id === product.id);
+
+    // if (existingProduct) {
+    //     // If the product is already in the cart, just update its quantity
+    //     const updatedCart = cart.map(item =>
+    //         item.id === product.id
+    //             ? { ...item, quantity: item.quantity + quantity }
+    //             : item
+    //     );
+    //     setCart(updatedCart);
+    // } else {
+    //     // If the product is not in the cart, add it with the specified quantity
+    //     setCart([...cart, { ...product, quantity }]);
+    // }
 
 
-// Save cart to LocalStorage
-//sessionStorage.setItem(`${products.title}`,JSON.stringify(count));
-sessionStorage.setItem(product.title, JSON.stringify([count, product.price]));
-setCount(0);
+    // Save product to sessionStorage
+    // store the value as an array of two elements: quantity and price
+    sessionStorage.setItem(product.title, JSON.stringify([count, product.price]));
+    
+    setCount(0);
 };
+
 
   return (
     <div>
       <button onClick={countIncrement}>+</button>
-      <button id="addtocart" onClick={addToCart}>Add to Cart</button>
+      <button id="addtocart" onClick={onAddToCart}>Add to Cart</button>
+      {/* <Link to={`/shoppingcart/${product.id}/${count}`}>
+        Add to Cart
+      </Link> */}
       <button onClick={countDecrement}>-</button>
-   
+      
       <center>
           <span>{count}</span>
       </center>

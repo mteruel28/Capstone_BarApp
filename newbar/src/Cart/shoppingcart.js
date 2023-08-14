@@ -8,12 +8,12 @@ function Shoppingcart(){
 
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState([]);
- 
+  
+
   // Load cart items from localStorage when component mounts
   useEffect(() => {
-   
-     // retrieve all the objects as key and value objects in sessionStorage and store in an array
-     const items = Object.keys(sessionStorage).map(key => {
+   // retrieve all the objects as key and value objects in sessionStorage and store in an array
+    const items = Object.keys(sessionStorage).map(key => {
       let value = JSON.parse(sessionStorage.getItem(key));
       return {
         title: key,
@@ -24,9 +24,16 @@ function Shoppingcart(){
 
     setProducts(items);
   }, []);
+
+  
   
 
+   // Calculate the total based on the items in the cart
+  //  const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
    return (
+
+
     <div className="header">
       <div>
         <div className="logo">Shopping Cart</div>
@@ -65,13 +72,20 @@ function Shoppingcart(){
           <button> Return to Home </button>
         </Link>
       </center>
-      </div>
- 
+
+
+      
+      {/* <Inventory /> */}
+      {/* Passing product array as a prop */}
+      {/* <Shoppingcart products={products} /> */}
+      {/* <Counter product={product} onAddToCart={addToCart} /> */}
+
+
+    </div>
   );
               }
 
 export default Shoppingcart;
-
 
 
 

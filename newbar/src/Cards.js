@@ -21,7 +21,7 @@ function Cards(){
             title: "Shopping Cart",
             sub_header: "This pages features your checkout information",
             link_text: "View Shopping Cart",
-            path: "/Shoppingcart",
+            path: "/shoppingcart",
             img_path: cart
         },
         {
