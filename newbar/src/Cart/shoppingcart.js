@@ -66,10 +66,10 @@ function Shoppingcart(){
   };
 
    return (
-    <div className="header">
-  <div>
+   <div className="header">
+  {/* Top row with title & cart count */}
+  <div className="header-top">
     <div className="logo">Shopping Cart</div>
-
     <div className="cart">
       <i className="fa-solid fa-cart-shopping"></i>
       Cart Items:{" "}
@@ -77,43 +77,44 @@ function Shoppingcart(){
         {products.reduce((sum, p) => sum + (p.quantity || 0), 0)}
       </p>
     </div>
+  </div>
 
-    {message && (
-      <p style={{ color: "green", marginTop: "10px" }}>{message}</p>
-    )}
+  {message && (
+    <p style={{ color: "green", marginTop: "10px" }}>{message}</p>
+  )}
 
-    <div className="sc-container">
-      <div className="sidebar">
-        <div className="head"><p>My Cart</p></div>
+  {/* Centered cart container */}
+  <div className="sc-container">
+    <div className="sidebar">
+      <div className="head"><p>My Cart</p></div>
 
-        <div id="cartItem">
-          {products.length > 0 ? (
-            products.map((product) => (
-              <div key={product.title}>
-                <h4>{product.title}</h4>
-                <p>Price: ${(product.price * product.quantity).toFixed(2)}</p>
-                <p>Quantity: {product.quantity}</p>
+      <div id="cartItem">
+        {products.length > 0 ? (
+          products.map((product) => (
+            <div key={product.title}>
+              <h4>{product.title}</h4>
+              <p>Price: ${(product.price * product.quantity).toFixed(2)}</p>
+              <p>Quantity: {product.quantity}</p>
 
-                {/* Buttons for item control */}
-                <button onClick={() => changeQuantity(product.title, -1)}>-</button>
-                <button onClick={() => changeQuantity(product.title, 1)}>+</button>
-                <button onClick={() => removeItem(product.title)}>Remove</button>
-              </div>
-            ))
-          ) : (
-            <p>Your cart is empty</p>
-          )}
-        </div>
-
-        <div className="foot">
-          <h3>Total</h3>
-          <h2 id="total">${total.toFixed(2)}</h2>
-        </div>
-
-        {products.length > 0 && (
-          <button onClick={clearCart}>Clear Cart</button>
+              {/* Buttons for item control */}
+              <button onClick={() => changeQuantity(product.title, -1)}>-</button>
+              <button onClick={() => changeQuantity(product.title, 1)}>+</button>
+              <button onClick={() => removeItem(product.title)}>Remove</button>
+            </div>
+          ))
+        ) : (
+          <p>Your cart is empty</p>
         )}
       </div>
+
+      <div className="foot">
+        <h3>Total</h3>
+        <h2 id="total">${total.toFixed(2)}</h2>
+      </div>
+
+      {products.length > 0 && (
+        <button onClick={clearCart}>Clear Cart</button>
+      )}
     </div>
   </div>
 
@@ -123,7 +124,6 @@ function Shoppingcart(){
     </Link>
   </center>
 </div>
-
    )
 }
 export default Shoppingcart;

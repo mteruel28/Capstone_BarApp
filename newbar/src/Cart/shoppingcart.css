@@ -1,34 +1,40 @@
-.header{
-    height:auto;
+.header {
+    height: auto;
     width: auto;  
     border-radius: 5px;
     padding: 1rem;
     background-color: #212529;
-    color:white;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+/* Top bar layout */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo{
-    font-size:30px;
+.logo {
+    font-size: 30px;
     font-weight: bold;
-    color:white;
-
 }
 
-.cart{
-    height:auto;
-    width: auto; 
+.cart {
     display: flex;
     align-items: center;
-    justify-content: right;
-    font-size:30px;
+    justify-content: center; /* Centers Cart Items label too */
+    font-size: 30px;
     font-weight: bold;
-    color:white;
+    color: white;
+    margin-bottom: 1rem; /* Adds space between Cart Items and cart content */
 }
 
-.sc-container{
+.sc-container {
     display: flex;
-    width: auto;
-    margin-bottom: auto;
+    justify-content: center; /* Centers the cart box horizontally */
+    margin: 0 auto;
+    min-height: 60vh; /* Optional: keeps it vertically balanced */
 }
 
 .sidebar{
@@ -59,3 +65,7 @@
     padding: 10px 0px;
     border-top: 1px solid gray;
 }
+
+.cart p { margin: 0; display: inline; }   /* make it inline */
+#count { margin-left: .35rem; font-weight: 700; }
+.cart i { margin-right: .5rem; }    
