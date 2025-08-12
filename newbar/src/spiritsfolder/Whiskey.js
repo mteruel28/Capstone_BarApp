@@ -1,21 +1,40 @@
-import React from 'react';
-import WhiskeyItemCards from './WhiskeyItemCards';
-import './Whiskey.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import WhiskeyItemCards from "./WhiskeyItemCards";
+import "./Whiskey.css";
+import { Link } from "react-router-dom";
 
-function Whiskey(){
-    return(
-        <div>
-       <center><p>Whiskeys</p></center>
-       <div className="search-bar-container">
-                <input className="search-bar" placeholder="Search..." type="text"></input>
-            </div>
+function Whiskey() {
+  // define message state INSIDE component
+  const [message, setMessage] = useState("");
 
-            <center> <Link to = '/Spirits'><button> Return to Previous Page</button> </Link></center>
-            <center> <Link to = '/shoppingcart'><button> Return to Shopping Cart </button> </Link></center>
+  // define handler INSIDE component
+  const handleAdded = (title, quantity) => {
+    setMessage(`"${title}" has been added to your shopping cart\nQuantity added: ${quantity}`);
+    setTimeout(() => setMessage(""), 10000);
+  };
 
-       <WhiskeyItemCards/>
-       </div>
-    )
+  return (
+    <div>
+      <center><p>Whiskeys</p></center>
+
+      {/* use message safely */}
+      {message && (
+        <center>
+          <p style={{ color: "green", fontWeight: "bold", whiteSpace: "pre-line" }}>{message}</p>
+        </center>
+      )}
+
+      <div className="search-bar-container">
+        <input className="search-bar" placeholder="Search..." type="text" />
+      </div>
+
+      <center><Link to="/Spirits"><button>Return to Previous Page</button></Link></center>
+      <center><Link to="/shoppingcart"><button>Return to Shopping Cart</button></Link></center>
+
+      {/* pass handler to child */}
+      <WhiskeyItemCards onAdded={handleAdded} />
+    </div>
+  );
 }
+
 export default Whiskey;

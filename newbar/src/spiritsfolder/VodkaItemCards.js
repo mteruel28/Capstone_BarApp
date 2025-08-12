@@ -8,9 +8,9 @@ import svedka from '../img/svedka.jpg';
 
 
 
-function VodkaItemCards(){
+function VodkaItemCards({ onAdded }){
 
-    let Items = [
+   const Vodkas = [
         {
             title: "Tito's Handmade Vodka",
             sub_header: " Titos",
@@ -37,23 +37,21 @@ function VodkaItemCards(){
         }
    ] 
 
-return(
+ return (
     <div id="root">
-       <div className="Container-8">
+      <div className="Container-8">
+        {Vodkas.map((vodka) => (
+          <div className="Items" key={vodka.title}>
+            <h3 className="Items__title">{vodka.title}</h3>
+            <p className="Items_description">{vodka.sub_header}</p>
+            <img src={vodka.img_path} alt={vodka.title} width="100" height="100" />
+            <div className="Items_price">${vodka.price.toFixed(2)}</div>
+            <Counter product={vodka} onAdded={onAdded} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
-          {
-              Items.map(Items => (
-                  <div className="Items" key={Items.title} >
-                      <h3 className= "Items__title">{Items.title}</h3>
-                      <p className="Items_description">{Items.sub_header}</p>
-                      <img src={Items.img_path} alt="" width='100' height='100' />
-                      <div className="Items_price">{Items.price}</div>
-                      <Counter product={Items}></Counter>
-                  </div>
-              ))
-              }
-              </div>
-              </div>
-)
-            }
 export default VodkaItemCards;

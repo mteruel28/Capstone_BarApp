@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Counter from "../components/counter";
 import patron from "../img/patron.jpg";
 import reservasilver from "../img/reservasilver.jpg";
 import sauza from "../img/sauza.jpg";
 import painteddonkey from "../img/painteddonkey.jpg";
 
-function TequilaItemCards() {
-  let Items = [
+function TequilaItemCards({ onAdded }) {
+  const Tequilas = [
     {
       title: "Patron Silver Tequila",
       sub_header: "Patron Silver Tequila",
@@ -36,14 +35,15 @@ function TequilaItemCards() {
 
   return (
     <div id="root">
-      <div className="Container-9">
-        {Items.map((Items) => (
-          <div className="Items" key={Items.title}>
-            <h3 className="Items__title">{Items.title}</h3>
-            <p className="Items_description">{Items.sub_header}</p>
-            <img src={Items.img_path} alt="" width="100" height="100" />
-            <div className="Items_price">{Items.price}</div>
-            <Counter product={Items}></Counter>
+      <div className="Container-7">
+        {Tequilas.map((tequila) => (
+          <div className="Tequila" key={tequila.title}>
+            <div className="Tequila__title">{tequila.title}</div>
+            <p className="Tequila_description">{tequila.sub_header}</p>
+            <img src={tequila.img_path} alt={tequila.title} width="100" height="100" />
+            <div className="Tequila_price">${tequila.price}</div>
+            {/* Counter handles adding to cart and setting lastAddedTitle */}
+            <Counter product={tequila} onAdded={onAdded} />
           </div>
         ))}
       </div>

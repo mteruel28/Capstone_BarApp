@@ -7,8 +7,8 @@ import johnniewalker from "../img/johnniewalker.jpg";
 import makers from "../img/makers.jpg";
 import macallan from "../img/macallan.jpg";
 
-function WhiskeyItemCards() {
-  let Whiskeys = [
+function WhiskeyItemCards({ onAdded }) {
+ const Whiskeys = [
     {
       title: "Jameson Irish Whiskey",
       sub_header: " Jameson Irish Whiskey is a blended Irish Whiskey. A light floral fragrance, peppered with spicy wood and sweet notes.",
@@ -48,16 +48,18 @@ function WhiskeyItemCards() {
     },
   ];
 
+
   return (
     <div id="root">
       <div className="Container-7">
-      {Whiskeys.map((Whiskeys) => (
-          <div className="Whiskeys" key={Whiskeys.id}>
-            <div className="Whiskeys__title">{Whiskeys.title}</div>
-            <p className="Whiskeys_description">{Whiskeys.sub_header}</p>
-            <img src={Whiskeys.img_path} alt="" width="100" height="100" />
-            <div className="Whiskeys_price">{Whiskeys.price}</div>
-            <Counter product={Whiskeys}></Counter>
+        {Whiskeys.map((whiskey) => (
+          <div className="Whiskeys" key={whiskey.title}>
+            <div className="Whiskeys__title">{whiskey.title}</div>
+            <p className="Whiskeys_description">{whiskey.sub_header}</p>
+            <img src={whiskey.img_path} alt={whiskey.title} width="100" height="100" />
+            <div className="Whiskeys_price">${whiskey.price}</div>
+            {/* Counter handles adding to cart and setting lastAddedTitle */}
+            <Counter product={whiskey} onAdded={onAdded}/>
           </div>
         ))}
       </div>
