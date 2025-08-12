@@ -5,17 +5,10 @@ import { Link } from "react-router-dom";
 const Counter = ({ product }) => {
   // react hooks for state management. State is just a variable that changes in a component.
   const [count, setCount] = useState(0);
-  // state = {
-  //   count: 0,
-  // };
-
-  // constructor() {
-  //   super(); // refers to component object // this refers to current class
-  //   this.countIncrement = this.countIncrement.bind(this);
-  //   this.countDecrement = this.countDecrement.bind(this);
-  // }
-
   const [cart, setCart] = useState([]);
+
+  //New: state the confirmation message
+  const[message ,setMessage] = useState("");
 
   const countIncrement = () => {
     // this.setState({ count: this.state.count + 1 });
@@ -30,8 +23,23 @@ const Counter = ({ product }) => {
 
   const addToCart = () => {
     if (count > 0) {
-      onAddToCart(product, count);
+      //save product to sessionStorage
+      sessionStorage.setItem(
+        product.title,
+        JSON.stringify([count,product.price])
+      );
+      setMessage(`"${product.title}" has been added to your shopping cart`);
+      setTimeout(() => setMessage(""), 2000);
       setCount(0);
+
+    //New: Shows confirmation message
+    setMessage(`"${product.title}" has been added to your shopping cart`);
+  
+    //Clears message after 2 seconds
+    setTimeout(() => setMessage(""), 2000);
+
+    setCount(0);
+
     }
   }
 
@@ -56,7 +64,7 @@ const Counter = ({ product }) => {
     // Save product to sessionStorage
     // store the value as an array of two elements: quantity and price
     sessionStorage.setItem(product.title, JSON.stringify([count, product.price]));
-    
+    sessionStorage.setItem("lastAddedTitle", product.title);
     setCount(0);
    
 };
@@ -64,16 +72,20 @@ const Counter = ({ product }) => {
 
   return (
     <div>
-      <button onClick={countIncrement}>+</button>
-      <button id="addtocart"onClick={onAddToCart} >Add to Cart</button> 
-      {/* <Link to={`/shoppingcart/${product.id}/${count}`}>
-        Add to Cart
-      </Link> */}
       <button onClick={countDecrement}>-</button>
+      <button id="addtocart" onClick={onAddToCart} 
+      >Add to Cart
+      </button> 
+      <button onClick={countIncrement}>+</button>
       
       <center>
           <span>{count}</span>
       </center>
+
+       {message && (
+        <p style={{ color: "green", marginTop: "10px" }}>{message}</p>
+      )}
+
     </div>
   )
 

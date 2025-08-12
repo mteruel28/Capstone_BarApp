@@ -6,23 +6,34 @@ import { Link } from "react-router-dom";
 
 function Shoppingcart(){
 
-  const [cartItems, setcartItems] = useState([]);
   const [products, setProducts] = useState([]);
+  const [message, setMessage] = useState("");
   
-
+  
   // Load cart items from localStorage when component mounts
   useEffect(() => {
    // retrieve all the objects as key and value objects in sessionStorage and store in an array
-    const items = Object.keys(sessionStorage).map(key => {
-      let value = JSON.parse(sessionStorage.getItem(key));
-      return {
-        title: key,
-        quantity: value[0],
-        price: value[1]
+    const items = Object.keys(sessionStorage)
+    .filter((k) => k !== "lastAddedTitle") // skip the banner key
+    .map((k) => {
+      try {
+        const [qty, price] = JSON.parse(sessionStorage.getItem(k) || "[]");
+        return { title: k, quantity: Number(qty) || 0, price: Number(price) || 0 };
+      } catch {
+        return null; // skip non-JSON keys
       }
-    });
+    })
+    .filter(Boolean);
 
-    setProducts(items);
+  setProducts(items);
+
+    const last = sessionStorage.getItem("lastAddedTitle");
+  if (last) {
+    setMessage(`"${last}" has been added to your shopping cart`);
+    sessionStorage.removeItem("lastAddedTitle");
+    setTimeout(() => setMessage(""), 2000);
+  }
+
   }, []);
 
   const total = products.reduce((acc, product) => acc + product.price * product.quantity, 0);
@@ -40,8 +51,15 @@ function Shoppingcart(){
 
         <div className="cart">
           <i className="fa-solid fa-cart-shopping"></i>
-          Cart Items <p id="count">{cartItems.length}</p>
+          Cart Items:
+          <p id="count">
+        {products.reduce((sum, p) => sum + (p.quantity || 0), 0)}
+        </p>
         </div>
+
+ {message && (
+      <p style={{ color: "green", marginTop: "10px" }}>{message}</p>
+    )}
 
         <div className="sc-container">
           <div id="root"></div>
