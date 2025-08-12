@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Shoppingcart(){
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setcartItems] = useState([]);
   const [products, setProducts] = useState([]);
   
 
