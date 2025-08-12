@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Counter from "../components/counter";
 import bombay from "../img/bombay.jpg";
 import tanqueray from "../img/tanqueray.jpg";
 import hendricks from "../img//hendricks.jpg";
 import beefeater from "../img/beefeater.jpg";
 
-function GinItemCards() {
-  let Items = [
+function GinItemCards({ onAdded }) {
+ const Gins = [
     {
       title: "Bombay Sapphire Gin",
       sub_header: "Bombay Sapphire Gin",
@@ -37,13 +36,13 @@ function GinItemCards() {
   return (
     <div id="root">
       <div className="Container-10">
-        {Items.map((Items) => (
-          <div className="Items" key={Items.title}>
-            <h3 className="Items__title">{Items.title}</h3>
-            <p className="Items_description">{Items.sub_header}</p>
-            <img src={Items.img_path} alt="" width="100" height="100" />
-            <div className="Items_price">{Items.price}</div>
-            <Counter product={Items}></Counter>
+        {Gins.map((Gin) => (
+          <div className="Items" key={Gin.title}>
+            <h3 className="Items__title">{Gin.title}</h3>
+            <p className="Items_description">{Gin.sub_header}</p>
+            <img src={Gin.img_path} alt="" width="100" height="100" />
+            <div className="Items_price">${Gin.price.toFixed(2)}</div>
+            <Counter product={Gin} onAdded={onAdded}></Counter>
           </div>
         ))}
       </div>

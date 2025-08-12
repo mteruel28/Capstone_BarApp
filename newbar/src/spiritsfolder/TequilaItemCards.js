@@ -37,11 +37,11 @@ function TequilaItemCards({ onAdded }) {
     <div id="root">
       <div className="Container-7">
         {Tequilas.map((tequila) => (
-          <div className="Tequila" key={tequila.title}>
-            <div className="Tequila__title">{tequila.title}</div>
-            <p className="Tequila_description">{tequila.sub_header}</p>
+          <div className="Items" key={tequila.title}>
+            <div className="Items__title">{tequila.title}</div>
+            <p className="Items_description">{tequila.sub_header}</p>
             <img src={tequila.img_path} alt={tequila.title} width="100" height="100" />
-            <div className="Tequila_price">${tequila.price}</div>
+            <div className="Items_price">${tequila.price.toFixed(2)}</div>
             {/* Counter handles adding to cart and setting lastAddedTitle */}
             <Counter product={tequila} onAdded={onAdded} />
           </div>

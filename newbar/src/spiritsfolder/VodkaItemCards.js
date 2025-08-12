@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Counter from "../components/counter";
 import greygoose from '../img/greygoose.jpg';
 import titos from '../img/titos.jpg';
