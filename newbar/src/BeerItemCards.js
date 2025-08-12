@@ -7,8 +7,8 @@ import Kirin from "./img/Kirin.jpg";
 import CoronaExtra from "./img/CoronaExtra.jpg";
 import TwistedTea from "./img/TwistedTea.jpg";
 
-function BeerItemCards() {
-  let Beers = [
+function BeerItemCards({ onAdded }) {
+  const Beers = [
     {
       title: "Sapporo Premium",
       sub_header: " Sapporo Premium Beer is a refreshing lager with a crisp, refined flavor and a clean finish",
@@ -55,8 +55,8 @@ function BeerItemCards() {
             <div className="Beers__title">{Beers.title}</div>
             <p className="Beers_description">{Beers.sub_header}</p>
             <img src={Beers.img_path} alt="" width="100" height="100" />
-            <div className="Beers_price">{Beers.price}</div>
-            <Counter product={Beers}></Counter>
+            <div className="Beers_price">${Beers.price.toFixed(2)}</div>
+            <Counter product={Beers} onAdded={onAdded}></Counter>
           </div>
         ))}
       </div>

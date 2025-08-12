@@ -8,9 +8,9 @@ import joshsb from "./img/JoshSB.jpg";
 import chateau from "./img/ChateauChardonnay.jpg";
 import Bartenura from "./img/Bartenura.jpg";
 
-const WineItemCards = () => {
+const WineItemCards = ({ onAdded }) => {
 
-let Wines = [
+const Wines = [
     {
       id: 0,
       title: "Robert Mondavi Private Selection Cabernet Sauvignon",
@@ -81,8 +81,8 @@ let Wines = [
             <div className="Wines__title">{Wines.title}</div>
             <p className="Wines_description">{Wines.sub_header}</p>
             <img src={Wines.img_path} alt="" width="100" height="100" />
-            <div className="Wines_price">{Wines.price}</div>
-            <Counter product={Wines}></Counter>
+            <div className="Wines_price">${Wines.price.toFixed(2)}</div>
+            <Counter product={Wines} onAdded={onAdded}></Counter>
           </div>
         ))}
       </div>

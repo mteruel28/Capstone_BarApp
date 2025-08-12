@@ -57,7 +57,7 @@ function WhiskeyItemCards({ onAdded }) {
             <div className="Whiskeys__title">{whiskey.title}</div>
             <p className="Whiskeys_description">{whiskey.sub_header}</p>
             <img src={whiskey.img_path} alt={whiskey.title} width="100" height="100" />
-            <div className="Whiskeys_price">${whiskey.price}</div>
+            <div className="Whiskeys_price">${whiskey.price.toFixed(2)}</div>
             {/* Counter handles adding to cart and setting lastAddedTitle */}
             <Counter product={whiskey} onAdded={onAdded}/>
           </div>
