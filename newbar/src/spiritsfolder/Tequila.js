@@ -23,9 +23,7 @@ function Tequila(){
         </center>
       )}
 
-       <div className="search-bar-container">
-                <input className="search-bar" placeholder="Search..." type="text"></input>
-            </div>
+   
 
             <center> <Link to = '/Spirits'>
 <button> Return to Previous Page

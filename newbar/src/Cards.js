@@ -11,13 +11,6 @@ function Cards(){
 
     let cards = [
         {
-            title: "Rewards",
-            sub_header: "This page contains sign information for our rewards program",
-            link_text: "View Rewards",
-            path: "/Rewards",
-            img_path: doge
-        },
-        {
             title: "Shopping Cart",
             sub_header: "This pages features your checkout information",
             link_text: "View Shopping Cart",

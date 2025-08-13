@@ -122,6 +122,15 @@ function Shoppingcart(){
     <Link to="/">
       <button>Return to Home</button>
     </Link>
+    <Link to="/Spirits">
+      <button>Go to Spirits</button>
+    </Link>
+    <Link to="/Wines">
+      <button>Go to Wines</button>
+    </Link>
+    <Link to="/BeersAndSeltzers">
+      <button>Go to Beer & Seltzers</button>
+    </Link>
   </center>
 </div>
    )

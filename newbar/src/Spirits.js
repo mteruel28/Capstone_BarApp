@@ -7,9 +7,7 @@ function Spirits(){
     return(
         <div>
        <center><p>Spirits</p></center>
-       <div className="search-bar-container">
-       <input className="search-bar" placeholder="Search..." type="text"></input>
-</div>
+       
 
 <center> <Link to = '/'>
 <button> Return to Home 
