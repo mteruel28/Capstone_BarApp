@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import doge from './img/dogecrazy.jpg';
 import cart from './img/Shoppingcart.jpg';
 import wine from './img/Wines.jpg';
 import mixers from './img/Mixers.jpg';
