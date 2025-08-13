@@ -26,4 +26,4 @@ http://localhost:3000
 
 To exit the application, using the keys below , this will shutdown the server
 Ctrl + C
-Command + C (on Mac)
+, Command + C (on Mac)
